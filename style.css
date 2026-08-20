@@ -712,3 +712,1437 @@ img {
 
     font-size: 13px;
   }
+/* =========================================================
+   PROGZT AETHERIC
+   CSS — Part 2/3
+========================================================= */
+
+
+/* =========================================================
+   SECTORS
+========================================================= */
+
+.sectors {
+
+    background: var(--gray-50);
+}
+
+.section-top {
+
+    margin-bottom: 55px;
+}
+
+.sector-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.sector-card {
+
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 32px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.sector-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(20, 110, 245, .25);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.sector-number {
+
+    position: absolute;
+
+    top: 24px;
+
+    left: 27px;
+
+    font-family: Inter, sans-serif;
+
+    color: var(--gray-400);
+
+    font-size: 11px;
+}
+
+.sector-icon {
+
+    width: 54px;
+    height: 54px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(20, 110, 245, .08);
+
+    color: var(--blue);
+
+    font-family: Inter, sans-serif;
+
+    font-size: 20px;
+
+    margin-bottom: 45px;
+}
+
+.sector-card h3 {
+
+    font-size: 21px;
+
+    color: var(--navy);
+}
+
+.sector-card p {
+
+    margin-top: 9px;
+
+    color: var(--gray-500);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   COMPANIES
+========================================================= */
+
+.companies {
+
+    background: white;
+}
+
+.companies-heading {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.companies-heading h2 {
+
+    font-size:
+        clamp(38px, 5vw, 62px);
+
+    line-height: 1.25;
+
+    color: var(--navy);
+}
+
+.companies-heading h2 span {
+
+    display: block;
+
+    color: var(--blue);
+}
+
+.companies-heading p {
+
+    max-width: 400px;
+
+    color: var(--gray-500);
+}
+
+.company-grid {
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: var(--gray-200);
+
+    border:
+        1px solid var(--gray-200);
+}
+
+.company-card {
+
+    min-height: 230px;
+
+    padding: 30px;
+
+    background: white;
+
+    transition:
+        background .25s ease;
+}
+
+.company-card:hover {
+
+    background: #f8fbff;
+}
+
+.company-card > span {
+
+    font-family: Inter, sans-serif;
+
+    color: var(--blue);
+
+    font-size: 11px;
+}
+
+.company-card h3 {
+
+    margin-top: 55px;
+
+    font-size: 21px;
+
+    color: var(--navy);
+}
+
+.company-card p {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    color: var(--gray-500);
+}
+
+
+/* =========================================================
+   OWNERSHIP
+========================================================= */
+
+.ownership {
+
+    padding-top: 20px;
+
+    background: white;
+}
+
+.ownership-box {
+
+    padding: 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    border-radius: 30px;
+
+    background: var(--navy);
+
+    color: white;
+}
+
+.ownership-box h2 {
+
+    margin-top: 15px;
+
+    font-size:
+        clamp(32px, 4vw, 52px);
+
+    line-height: 1.3;
+}
+
+.ownership-box h2 span {
+
+    color: #4d91ff;
+}
+
+.ownership-list {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.ownership-list div {
+
+    padding: 20px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.12);
+}
+
+.ownership-list strong {
+
+    display: block;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 18px;
+
+    direction: ltr;
+}
+
+.ownership-list span {
+
+    color: #9db0c8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+
+    background: var(--gray-50);
+}
+
+.timeline-list {
+
+    position: relative;
+
+    margin-top: 70px;
+}
+
+.timeline-list::before {
+
+    content: "";
+
+    position: absolute;
+
+    right: 120px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        var(--gray-200);
+}
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns:
+        120px 1fr;
+
+    gap: 65px;
+
+    position: relative;
+
+    padding-bottom: 55px;
+}
+
+.timeline-year {
+
+    font-family: Inter, sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: var(--blue);
+
+    direction: ltr;
+
+    text-align: left;
+}
+
+.timeline-content {
+
+    position: relative;
+
+    padding-right: 45px;
+}
+
+.timeline-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    right: -5px;
+
+    top: 12px;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    box-shadow:
+        0 0 0 7px rgba(20,110,245,.08);
+}
+
+.timeline-content h3 {
+
+    font-size: 23px;
+
+    color: var(--navy);
+}
+
+.timeline-content p {
+
+    margin-top: 7px;
+
+    max-width: 650px;
+
+    color: var(--gray-500);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FOUNDER
+========================================================= */
+
+.founder {
+
+    background: white;
+}
+
+.founder-grid {
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 90px;
+}
+
+.founder-title span {
+
+    color: var(--blue);
+
+    font-family: Inter, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.founder-title h2 {
+
+    margin-top: 18px;
+
+    font-size:
+        clamp(42px, 6vw, 76px);
+
+    line-height: 1.2;
+
+    color: var(--navy);
+}
+
+.founder-title h2 strong {
+
+    display: block;
+
+    color: var(--blue);
+}
+
+.founder-story {
+
+    color: var(--gray-500);
+
+    font-size: 16px;
+}
+
+.founder-story p + p {
+
+    margin-top: 22px;
+}
+
+.founder-story blockquote {
+
+    margin-top: 35px;
+
+    padding-right: 20px;
+
+    border-right:
+        3px solid var(--blue);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.closing {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    background: var(--navy);
+
+    color: white;
+}
+
+.closing-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .4;
+
+    background-image:
+
+        linear-gradient(
+            rgba(59,130,246,.08) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(59,130,246,.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+}
+
+.closing-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+.mini-logo {
+
+    width: 70px;
+    height: 70px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin: 0 auto 25px;
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    border-radius: 20px;
+
+    font-family: Inter, sans-serif;
+
+    font-weight: 800;
+
+    color: white;
+}
+
+.closing h2 {
+
+    font-family: Inter, sans-serif;
+
+    font-size:
+        clamp(48px, 8vw, 90px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    direction: ltr;
+}
+
+.closing h2 span {
+
+    color: #4d91ff;
+}
+
+.closing p {
+
+    margin-top: 20px;
+
+    font-family: Inter, sans-serif;
+
+    color: #9db0c8;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    direction: ltr;
+}
+
+.button-light {
+
+    margin-top: 35px;
+
+    background: white;
+
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    padding: 35px 0;
+
+    background: #050d18;
+
+    color: white;
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto auto;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+.footer-brand strong {
+
+    display: block;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    direction: ltr;
+}
+
+.footer-brand span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    color: #7789a0;
+
+    direction: ltr;
+}
+
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-links a {
+
+    font-size: 11px;
+
+    color: #a8b6c8;
+}
+
+.footer-links a:hover {
+
+    color: white;
+}
+
+.footer-copy {
+
+    color: #627187;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 10px;
+
+    direction: ltr;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .mobile-nav {
+
+        display: none;
+
+        padding: 15px 20px 25px;
+
+        background: white;
+
+        border-top:
+            1px solid var(--gray-100);
+    }
+
+    .mobile-nav.open {
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .mobile-nav a {
+
+        padding: 13px 0;
+
+        color: var(--navy);
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        border-bottom:
+            1px solid var(--gray-100);
+    }
+
+    .intro-grid,
+    .founder-grid,
+    .ownership-box {
+
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .sector-grid,
+    .company-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .companies-heading {
+
+        align-items: start;
+
+        flex-direction: column;
+    }
+
+    .timeline-list::before {
+
+        right: 78px;
+    }
+
+    .timeline-item {
+
+        grid-template-columns:
+            78px 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+   }
+/* =========================================================
+   PROGZT AETHERIC
+   CSS — Part 3/3
+========================================================= */
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width:
+            min(100% - 28px, 1180px);
+    }
+
+    .nav-container {
+
+        height: 70px;
+    }
+
+    .brand-mark {
+
+        width: 34px;
+        height: 34px;
+    }
+
+    .brand-text strong {
+
+        font-size: 15px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .brand-text small {
+
+        font-size: 6px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero {
+
+        min-height: 100svh;
+    }
+
+    .hero-content {
+
+        padding-top: 100px;
+
+        padding-bottom: 90px;
+    }
+
+    .hero h1 {
+
+        margin-top: 22px;
+
+        font-size:
+            clamp(42px, 14vw, 64px);
+
+        letter-spacing: -2px;
+
+        line-height: 1.08;
+    }
+
+    .hero-description {
+
+        margin-top: 22px;
+
+        font-size: 15px;
+
+        line-height: 1.9;
+    }
+
+    .hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-top: 30px;
+    }
+
+    .button {
+
+        width: 100%;
+
+        min-height: 50px;
+    }
+
+    .hero-scroll {
+
+        display: none;
+    }
+
+    .section {
+
+        padding: 85px 0;
+    }
+
+    .section-label {
+
+        font-size: 10px;
+    }
+
+    .section-title {
+
+        margin-top: 14px;
+
+        font-size:
+            clamp(34px, 10vw, 48px);
+
+        letter-spacing: -1px;
+    }
+
+    .intro-grid {
+
+        margin-top: 40px;
+
+        gap: 35px;
+    }
+
+    .intro-heading h2 {
+
+        font-size:
+            clamp(34px, 10vw, 48px);
+    }
+
+    .intro-text {
+
+        font-size: 15px;
+
+        line-height: 1.9;
+    }
+
+    .stats-section {
+
+        padding: 50px 0;
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 0;
+    }
+
+    .stat {
+
+        padding: 22px 15px;
+    }
+
+    .stat strong {
+
+        font-size:
+            clamp(32px, 10vw, 48px);
+    }
+
+    .stat span {
+
+        margin-top: 9px;
+
+        font-size: 11px;
+    }
+
+    .sector-grid,
+    .company-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .section-top {
+
+        margin-bottom: 38px;
+    }
+
+    .sector-card {
+
+        min-height: 235px;
+
+        padding: 26px;
+
+        border-radius: 20px;
+    }
+
+    .sector-number {
+
+        top: 20px;
+
+        left: 22px;
+    }
+
+    .sector-icon {
+
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 35px;
+    }
+
+    .sector-card h3 {
+
+        font-size: 19px;
+    }
+
+    .sector-card p {
+
+        font-size: 13px;
+    }
+
+    .companies-heading {
+
+        margin-top: 15px;
+
+        gap: 25px;
+    }
+
+    .companies-heading h2 {
+
+        font-size:
+            clamp(34px, 10vw, 48px);
+    }
+
+    .companies-heading p {
+
+        font-size: 14px;
+    }
+
+    .company-grid {
+
+        margin-top: 40px;
+    }
+
+    .company-card {
+
+        min-height: 200px;
+
+        padding: 25px;
+    }
+
+    .company-card h3 {
+
+        margin-top: 45px;
+
+        font-size: 19px;
+    }
+
+    .company-card p {
+
+        font-size: 12px;
+    }
+
+    .ownership {
+
+        padding-top: 0;
+    }
+
+    .ownership-box {
+
+        padding: 35px 25px;
+
+        gap: 35px;
+
+        border-radius: 24px;
+    }
+
+    .ownership-box h2 {
+
+        font-size:
+            clamp(30px, 9vw, 44px);
+    }
+
+    .ownership-list div {
+
+        padding: 17px 0;
+    }
+
+    .ownership-list strong {
+
+        font-size: 16px;
+    }
+
+    .ownership-list span {
+
+        font-size: 11px;
+    }
+
+    .timeline-list {
+
+        margin-top: 50px;
+    }
+
+    .timeline-list::before {
+
+        right: 57px;
+    }
+
+    .timeline-item {
+
+        grid-template-columns:
+            57px 1fr;
+
+        gap: 20px;
+
+        padding-bottom: 40px;
+    }
+
+    .timeline-year {
+
+        font-size: 19px;
+    }
+
+    .timeline-content {
+
+        padding-right: 30px;
+    }
+
+    .timeline-content::before {
+
+        right: -5px;
+
+        top: 9px;
+
+        width: 9px;
+        height: 9px;
+
+        box-shadow:
+            0 0 0 6px rgba(20,110,245,.08);
+    }
+
+    .timeline-content h3 {
+
+        font-size: 18px;
+    }
+
+    .timeline-content p {
+
+        font-size: 13px;
+
+        line-height: 1.9;
+    }
+
+    .founder-grid {
+
+        margin-top: 45px;
+
+        gap: 40px;
+    }
+
+    .founder-title span {
+
+        font-size: 10px;
+    }
+
+    .founder-title h2 {
+
+        margin-top: 14px;
+
+        font-size:
+            clamp(38px, 11vw, 56px);
+    }
+
+    .founder-story {
+
+        font-size: 15px;
+
+        line-height: 1.95;
+    }
+
+    .founder-story blockquote {
+
+        margin-top: 28px;
+
+        padding-right: 15px;
+
+        font-size: 20px;
+    }
+
+    .closing {
+
+        min-height: 430px;
+    }
+
+    .mini-logo {
+
+        width: 60px;
+        height: 60px;
+
+        margin-bottom: 22px;
+
+        border-radius: 17px;
+    }
+
+    .closing h2 {
+
+        font-size:
+            clamp(45px, 14vw, 70px);
+
+        letter-spacing: -3px;
+    }
+
+    .closing p {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .button-light {
+
+        margin-top: 28px;
+    }
+
+    .site-footer {
+
+        padding: 30px 0;
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .footer-brand span {
+
+        font-size: 9px;
+    }
+
+    .footer-links {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .footer-links a {
+
+        font-size: 10px;
+    }
+
+    .footer-copy {
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+
+        width:
+            calc(100% - 24px);
+    }
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+    .hero-description {
+
+        font-size: 14px;
+    }
+
+    .section-title {
+
+        font-size: 32px;
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .stat {
+
+        padding: 18px 10px;
+    }
+
+    .stat strong {
+
+        font-size: 30px;
+    }
+
+    .stat span {
+
+        font-size: 10px;
+    }
+
+    .timeline-list::before {
+
+        right: 50px;
+    }
+
+    .timeline-item {
+
+        grid-template-columns:
+            50px 1fr;
+
+        gap: 15px;
+    }
+
+    .timeline-year {
+
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection {
+
+    background: var(--blue);
+
+    color: white;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #94a3b8;
+
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--blue);
+}
+
+
+/* =========================================================
+   FOCUS STATES
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline:
+        3px solid rgba(20,110,245,.35);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   MOBILE TAP SAFETY
+========================================================= */
+
+button {
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   END OF PROGZT AETHERIC CSS
+========================================================= */
