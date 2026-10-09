@@ -1,0 +1,34 @@
+# Progzt Aetheric
+
+> Progzt Aetheric is an AI and software engineering organization founded by Mohamed Elsayed Otman (محمد السيد عتمان).
+
+## Overview
+
+Progzt Aetheric (also known as Progzt) builds intelligent web systems and software products. Its stated areas of focus include custom agent architectures and Monster AI. The organization presents itself as a multi-sector technology enterprise spanning AI, software, web development, games, applications, and digital systems.
+
+## Mission
+
+Design and develop useful digital products and intelligent software systems, combining software engineering with AI and custom agent architectures.
+
+## Founder
+
+Mohamed Elsayed Otman (محمد السيد عتمان) is the founder and lead developer of Progzt Aetheric. The website describes his work across software, AI, web interfaces, games, applications, and digital products.
+
+## Technology
+
+- The public website is built with HTML, CSS, and JavaScript.
+- Product and engineering focus: AI, intelligent web systems, custom agent architectures, software engineering, and digital systems.
+- Specific AI model providers, frameworks, and infrastructure are not identified in the public project files.
+
+## Projects and organization
+
+- **Monster AI**: An AI project identified as part of Progzt Aetheric's focus.
+- **Progzt AI**: An AI project named in the organization's website history.
+- **Progzt Intelligence**: An AI and technology-focused part of the wider Progzt organization.
+- **Progzt TSD**: A technology unit described on the website as having started within Progzt Intelligence.
+- **Progzt Studios**: A digital-project development unit within the organization.
+
+## Official links
+
+- Website: https://progzt-aetheric.github.io/
+- GitHub organization: https://github.com/Progzt-Aetheric

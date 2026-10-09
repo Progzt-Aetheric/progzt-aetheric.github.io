@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://progzt-aetheric.github.io/sitemap.xml
+LLMs-Text: https://progzt-aetheric.github.io/llms.txt

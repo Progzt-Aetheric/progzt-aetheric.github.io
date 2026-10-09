@@ -9,16 +9,52 @@
 
     <meta
         name="description"
-        content="Progzt Aetheric هي شركة برمجيات وتطوير ناشئة متعددة القطاعات."
+        content="Progzt Aetheric - Advanced AI and Software Engineering Solutions founded by Mohamed Elsayed Otman."
     >
+    <meta name="author" content="Mohamed Elsayed Otman">
 
     <meta property="og:title" content="Progzt Aetheric">
-    <meta property="og:description" content="شركة برمجيات وتطوير متعددة القطاعات.">
+    <meta property="og:description" content="Progzt Aetheric - Advanced AI and Software Engineering Solutions founded by Mohamed Elsayed Otman.">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://progzt-aetheric.github.io/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://progzt-aetheric.github.io/#organization",
+                "name": "Progzt Aetheric",
+                "alternateName": "Progzt",
+                "url": "https://progzt-aetheric.github.io",
+                "description": "Innovative AI and software engineering organization specializing in intelligent web systems, custom agent architectures, and Monster AI.",
+                "founder": {
+                    "@id": "https://progzt-aetheric.github.io/#founder"
+                },
+                "sameAs": [
+                    "https://github.com/Progzt-Aetheric"
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://progzt-aetheric.github.io/#founder",
+                "name": "Mohamed Elsayed Otman",
+                "alternateName": "محمد السيد عتمان",
+                "jobTitle": "Founder & Lead Developer",
+                "worksFor": {
+                    "@id": "https://progzt-aetheric.github.io/#organization"
+                }
+            }
+        ]
+    }
+    </script>
 
     <title>Progzt Aetheric</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <meta name="google-site-verification" content="1_tTR39EdZ6gtg8xITwWjoktRTus3lNaeqJQ6gqtdek" />
 </head>
 
 <body>
@@ -64,7 +100,9 @@
             <button
                 class="menu-button"
                 id="menuButton"
+                type="button"
                 aria-label="فتح القائمة"
+                aria-controls="mobileNav"
                 aria-expanded="false"
             >
                 <span></span>
@@ -72,9 +110,23 @@
                 <span></span>
             </button>
 
+            <button
+                class="mobile-search-button"
+                id="commandButton"
+                type="button"
+                aria-label="فتح البحث والأوامر"
+                aria-haspopup="dialog"
+                aria-controls="commandPalette"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                    <path d="m16 16 5 5"></path>
+                </svg>
+            </button>
+
         </div>
 
-        <nav class="mobile-nav" id="mobileNav">
+        <nav class="mobile-nav" id="mobileNav" aria-label="التنقل الرئيسي" aria-hidden="true">
 
             <a href="#about">عن الشركة</a>
             <a href="#sectors">القطاعات</a>
@@ -86,6 +138,43 @@
 
     </header>
 
+    <dialog class="command-palette" id="commandPalette" aria-labelledby="commandTitle">
+
+        <div class="command-palette-header">
+            <h2 id="commandTitle">البحث في الموقع</h2>
+
+            <button
+                class="command-close"
+                id="commandClose"
+                type="button"
+                aria-label="إغلاق البحث"
+            >
+                &times;
+            </button>
+        </div>
+
+        <label class="visually-hidden" for="commandSearch">ابحث عن قسم</label>
+        <input
+            class="command-search"
+            id="commandSearch"
+            type="search"
+            placeholder="ابحث عن قسم..."
+            autocomplete="off"
+        >
+
+        <nav class="command-results" id="commandResults" aria-label="أقسام الموقع">
+            <a class="command-result" href="#home">الرئيسية</a>
+            <a class="command-result" href="#about">عن الشركة</a>
+            <a class="command-result" href="#sectors">القطاعات</a>
+            <a class="command-result" href="#companies">الشركات</a>
+            <a class="command-result" href="#timeline">المسيرة</a>
+            <a class="command-result" href="#founder">المؤسس</a>
+        </nav>
+
+        <p class="command-empty" id="commandEmpty" hidden>لا توجد أقسام مطابقة.</p>
+
+    </dialog>
+
 
     <main>
 
@@ -96,6 +185,7 @@
         <section class="hero" id="home">
 
             <div class="hero-grid"></div>
+            <canvas class="hero-particles" aria-hidden="true"></canvas>
 
             <div class="container hero-content">
 
@@ -111,9 +201,9 @@
                 </h1>
 
                 <p class="hero-description reveal">
-                    شركة برمجيات وتطوير ناشئة متعددة القطاعات،
-                    تعمل في تطوير المواقع والألعاب والتطبيقات
-                    والأنظمة وتصميم واجهات المستخدم.
+                    Progzt Aetheric هي مؤسسة للذكاء الاصطناعي وهندسة البرمجيات
+                    (AI Enterprise)، متخصصة في الأنظمة الذكية على الويب،
+                    وبُنى الوكلاء المخصصة، ومشروع Monster AI.
                 </p>
 
                 <div class="hero-actions reveal">
@@ -146,7 +236,7 @@
 
             <div class="container">
 
-                <div class="section-label reveal">
+                <div class="section-label reveal" data-i18n="ecosystemLabel">
                     01 — ABOUT
                 </div>
 
@@ -349,11 +439,11 @@
                 <div class="companies-heading reveal">
 
                     <h2>
-                        منظومة
+                        <span class="companies-title-primary" data-i18n="ecosystemTitleLead">منظومة</span>
                         <span>Progzt Aetheric</span>
                     </h2>
 
-                    <p>
+                    <p data-i18n="ecosystemDescription">
                         تضم شركات وقطاعات متعددة الخدمات والإنتاجية
                         تحت مظلة Progzt Aetheric.
                     </p>
@@ -363,59 +453,59 @@
 
                 <div class="company-grid">
 
-                    <article class="company-card reveal">
+                    <article class="company-card reveal tilt-card">
                         <span>01</span>
                         <h3>Progzt United</h3>
-                        <p>
+                        <p data-i18n="unitedDescription">
                             الكيان الذي تطورت من خلاله منظومة الشركات
                             والقطاعات متعددة الخدمات.
                         </p>
                     </article>
 
 
-                    <article class="company-card reveal">
+                    <article class="company-card reveal tilt-card">
                         <span>02</span>
                         <h3>Progzt Intelligence</h3>
-                        <p>
+                        <p data-i18n="intelligenceDescription">
                             قطاع متخصص في مجالات الذكاء الاصطناعي
                             والتقنيات البرمجية.
                         </p>
                     </article>
 
 
-                    <article class="company-card reveal">
+                    <article class="company-card reveal tilt-card">
                         <span>03</span>
                         <h3>Progzt TSD</h3>
-                        <p>
+                        <p data-i18n="tsdDescription">
                             قطاع تقني تطور من فريق داخل Progzt Intelligence.
                         </p>
                     </article>
 
 
-                    <article class="company-card reveal">
+                    <article class="company-card reveal tilt-card">
                         <span>04</span>
                         <h3>Progzt Studios</h3>
-                        <p>
+                        <p data-i18n="studiosDescription">
                             قطاع متخصص ضمن منظومة Progzt United
                             في تطوير المشروعات الرقمية.
                         </p>
                     </article>
 
 
-                    <article class="company-card reveal">
+                    <article class="company-card reveal tilt-card">
                         <span>05</span>
                         <h3>Progzt LEGEND</h3>
-                        <p>
+                        <p data-i18n="legendDescription">
                             شركة ضمن المنظومة تعمل في مجالات الألعاب
                             والتطبيقات والتصميم.
                         </p>
                     </article>
 
 
-                    <article class="company-card reveal">
+                    <article class="company-card reveal tilt-card">
                         <span>06</span>
                         <h3>Zoro</h3>
-                        <p>
+                        <p data-i18n="zoroDescription">
                             شركة تأسست ضمن توسعات المنظومة في مجالات
                             الألعاب والتطبيقات والتصميم.
                         </p>
@@ -438,13 +528,13 @@
 
                 <div>
 
-                    <div class="section-label">
+                    <div class="section-label" data-i18n="brandLabel">
                         PROGZT AETHERIC
                     </div>
 
                     <h2>
-                        علامات وحقوق
-                        <span>ضمن المنظومة</span>
+                        <span class="ownership-title-primary" data-i18n="ownershipTitleLead">علامات وحقوق</span>
+                        <span data-i18n="ownershipTitleAccent">ضمن المنظومة</span>
                     </h2>
 
                 </div>
@@ -453,17 +543,17 @@
 
                     <div>
                         <strong>Arbs Servers</strong>
-                        <span>علامة تجارية</span>
+                        <span data-i18n="trademarkLabel">علامة تجارية</span>
                     </div>
 
                     <div>
                         <strong>Progzt Studios</strong>
-                        <span>علامة تجارية</span>
+                        <span data-i18n="trademarkLabel">علامة تجارية</span>
                     </div>
 
                     <div>
                         <strong>Progzt World</strong>
-                        <span>قطاع ضمن المنظومة</span>
+                        <span data-i18n="organizationSectorLabel">قطاع ضمن المنظومة</span>
                     </div>
 
                 </div>
@@ -481,13 +571,13 @@
 
             <div class="container">
 
-                <div class="section-label reveal">
+                <div class="section-label reveal" data-i18n="historyLabel">
                     04 — HISTORY
                 </div>
 
                 <h2 class="section-title reveal">
-                    مسيرة
-                    <span>التطور</span>
+                    <span class="title-primary" data-i18n="historyTitleLead">مسيرة</span>
+                    <span data-i18n="historyTitleAccent">التطور</span>
                 </h2>
 
 
@@ -501,7 +591,7 @@
 
                             <h3>Progzt United</h3>
 
-                            <p>
+                            <p data-i18n="timeline2017">
                                 تأسيس Progzt United وبدء نشاطها
                                 كمطورة للألعاب الإلكترونية البسيطة.
                             </p>
@@ -519,7 +609,7 @@
 
                             <h3>Progzt Intelligence</h3>
 
-                            <p>
+                            <p data-i18n="timeline2020">
                                 تأسيس Progzt Intelligence وإطلاق
                                 مشروع Progzt AI بعد ذلك بفترة.
                             </p>
@@ -537,7 +627,7 @@
 
                             <h3>Progzt TSD</h3>
 
-                            <p>
+                            <p data-i18n="timeline2022">
                                 تأسيس Progzt TSD بعد أن بدأت
                                 كفريق داخل Progzt Intelligence.
                             </p>
@@ -553,9 +643,9 @@
 
                         <div class="timeline-content">
 
-                            <h3>توسع المنظومة</h3>
+                            <h3 data-i18n="timelineGrowthTitle">توسع المنظومة</h3>
 
-                            <p>
+                            <p data-i18n="timeline2023">
                                 وصول عدد العاملين في Progzt United
                                 إلى حوالي 700 شخص وفق المعلومات المقدمة.
                             </p>
@@ -571,9 +661,9 @@
 
                         <div class="timeline-content">
 
-                            <h3>شراكة NVB والتوسع</h3>
+                            <h3 data-i18n="timelineExpansionTitle">شراكة NVB والتوسع</h3>
 
-                            <p>
+                            <p data-i18n="timeline2024">
                                 دخول محمد السيد عتمان في شراكة NVB
                                 مع رجل الأعمال فاروق جابر، وتأسيس
                                 قطاعات وشركات جديدة ضمن المنظومة.
@@ -592,7 +682,7 @@
 
                             <h3>Progzt Studios</h3>
 
-                            <p>
+                            <p data-i18n="timeline2025">
                                 إدراج Progzt United كشركة قانونية ناشئة
                                 وتأسيس قطاع Progzt Studios.
                             </p>
@@ -610,7 +700,7 @@
 
                             <h3>Progzt Aetheric</h3>
 
-                            <p>
+                            <p data-i18n="timeline2026">
                                 تغيير اسم الشركة من Progzt United
                                 إلى Progzt Aetheric.
                             </p>
@@ -642,7 +732,7 @@
 
                     <div class="founder-title reveal">
 
-                        <span>Founder</span>
+                        <span>Founder &amp; Lead Developer</span>
 
                         <h2>
                             محمد السيد
@@ -655,7 +745,8 @@
                     <div class="founder-story reveal">
 
                         <p>
-                            محمد السيد عتمان هو رجل أعمال ومطور مصري،
+                            محمد السيد عتمان (Mohamed Elsayed Otman) هو مؤسس
+                            Progzt Aetheric والمطور الرئيسي، ورجل أعمال ومطور مصري،
                             بدأت مسيرته في مجال تصميم واجهات البرمجيات
                             على الإنترنت تحت اسم Progzt عام 2016.
                         </p>
@@ -718,11 +809,11 @@
                     <span>Aetheric</span>
                 </h2>
 
-                <p>
+                <p data-i18n="closingTagline">
                     Software • AI • Digital Systems
                 </p>
 
-                <a href="#home" class="button button-light">
+                <a href="#home" class="button button-light" data-i18n="backToTop">
                     العودة إلى الأعلى
                 </a>
 
@@ -742,4 +833,24 @@
         <div class="container footer-grid">
 
             <div class="footer-brand">
-  
+                <strong>PROGZT AETHERIC</strong>
+                <span data-i18n="footerTagline">AI • SOFTWARE • DIGITAL SYSTEMS</span>
+            </div>
+
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="#about" data-i18n="navAbout">عن الشركة</a>
+                <a href="#sectors" data-i18n="navSectors">القطاعات</a>
+                <a href="https://github.com/Progzt-Aetheric" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </nav>
+
+            <div class="footer-copy">
+                &copy; <span data-current-year></span> Progzt Aetheric
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
