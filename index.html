@@ -53,6 +53,7 @@
     <title>Progzt Aetheric</title>
 
     <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js" defer></script>
     <script src="./script.js" defer></script>
     <meta name="google-site-verification" content="1_tTR39EdZ6gtg8xITwWjoktRTus3lNaeqJQ6gqtdek" />
 </head>
@@ -87,52 +88,48 @@
 
             </a>
 
-            <nav class="desktop-nav">
+            <nav class="desktop-nav" aria-label="التنقل الرئيسي" data-i18n-aria="mainNav">
 
-                <a href="#about">عن الشركة</a>
-                <a href="#sectors">القطاعات</a>
-                <a href="#companies">الشركات</a>
-                <a href="#timeline">المسيرة</a>
-                <a href="#founder">المؤسس</a>
+                <a href="#about" data-i18n="navAbout">عن الشركة</a>
+                <a href="#sectors" data-i18n="navSectors">القطاعات</a>
+                <a href="#companies" data-i18n="navCompanies">الشركات</a>
+                <a href="#timeline" data-i18n="navTimeline">المسيرة</a>
+                <a href="#founder" data-i18n="navFounder">المؤسس</a>
 
             </nav>
 
-            <button
-                class="menu-button"
-                id="menuButton"
-                type="button"
-                aria-label="فتح القائمة"
-                aria-controls="mobileNav"
-                aria-expanded="false"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
 
-            <button
-                class="mobile-search-button"
-                id="commandButton"
-                type="button"
-                aria-label="فتح البحث والأوامر"
-                aria-haspopup="dialog"
-                aria-controls="commandPalette"
-            >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="10.8" cy="10.8" r="6.8"></circle>
-                    <path d="m16 16 5 5"></path>
-                </svg>
-            </button>
+                <div class="social-links nav-socials" aria-label="Social links" data-i18n-aria="socialLinks">
+                    <a href="https://github.com/Progzt-Aetheric" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.75 2.21 3.34 1.57.1-.72.39-1.21.7-1.49-2.48-.28-5.08-1.24-5.08-5.51 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.28-2.61 5.23-5.1 5.5.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+                    </a>
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.2a18.5 18.5 0 0 0-4.6-1.4l-.6 1.2a17 17 0 0 0-5 0l-.6-1.2a18.5 18.5 0 0 0-4.6 1.4C1.4 9.5.6 13.7 1 17.8a18.7 18.7 0 0 0 5.7 2.9l1.2-2a12 12 0 0 1-1.9-.9l.5-.4a13.3 13.3 0 0 0 11 0l.5.4a12 12 0 0 1-1.9.9l1.2 2a18.7 18.7 0 0 0 5.7-2.9c.5-4.8-.8-8.9-3.3-12.6ZM8.9 14.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.2 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg>
+                    </a>
+                </div>
+
+                <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English" data-i18n-aria="languageToggleAria" aria-pressed="false">EN</button>
+
+                <button class="mobile-search-button" id="commandButton" type="button" aria-label="فتح البحث والأوامر" data-i18n-aria="openSearch" aria-haspopup="dialog" aria-controls="commandPalette">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+                </button>
+
+                <button class="menu-button" id="menuButton" type="button" aria-label="فتح القائمة" data-i18n-aria="openMenu" aria-controls="mobileNav" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+            </div>
 
         </div>
 
-        <nav class="mobile-nav" id="mobileNav" aria-label="التنقل الرئيسي" aria-hidden="true">
+        <nav class="mobile-nav" id="mobileNav" aria-label="التنقل الرئيسي" data-i18n-aria="mainNav" aria-hidden="true">
 
-            <a href="#about">عن الشركة</a>
-            <a href="#sectors">القطاعات</a>
-            <a href="#companies">الشركات</a>
-            <a href="#timeline">المسيرة</a>
-            <a href="#founder">المؤسس</a>
+            <a href="#about" data-i18n="navAbout">عن الشركة</a>
+            <a href="#sectors" data-i18n="navSectors">القطاعات</a>
+            <a href="#companies" data-i18n="navCompanies">الشركات</a>
+            <a href="#timeline" data-i18n="navTimeline">المسيرة</a>
+            <a href="#founder" data-i18n="navFounder">المؤسس</a>
 
         </nav>
 
@@ -141,37 +138,39 @@
     <dialog class="command-palette" id="commandPalette" aria-labelledby="commandTitle">
 
         <div class="command-palette-header">
-            <h2 id="commandTitle">البحث في الموقع</h2>
+            <h2 id="commandTitle" data-i18n="searchTitle">البحث في الموقع</h2>
 
             <button
                 class="command-close"
                 id="commandClose"
                 type="button"
                 aria-label="إغلاق البحث"
+                data-i18n-aria="closeSearch"
             >
                 &times;
             </button>
         </div>
 
-        <label class="visually-hidden" for="commandSearch">ابحث عن قسم</label>
+        <label class="visually-hidden" for="commandSearch" data-i18n="searchLabel">ابحث عن قسم</label>
         <input
             class="command-search"
             id="commandSearch"
             type="search"
             placeholder="ابحث عن قسم..."
+            data-i18n-placeholder="searchPlaceholder"
             autocomplete="off"
         >
 
-        <nav class="command-results" id="commandResults" aria-label="أقسام الموقع">
-            <a class="command-result" href="#home">الرئيسية</a>
-            <a class="command-result" href="#about">عن الشركة</a>
-            <a class="command-result" href="#sectors">القطاعات</a>
-            <a class="command-result" href="#companies">الشركات</a>
-            <a class="command-result" href="#timeline">المسيرة</a>
-            <a class="command-result" href="#founder">المؤسس</a>
+        <nav class="command-results" id="commandResults" aria-label="أقسام الموقع" data-i18n-aria="sectionsLabel">
+            <a class="command-result" href="#home" data-i18n="navHome">الرئيسية</a>
+            <a class="command-result" href="#about" data-i18n="navAbout">عن الشركة</a>
+            <a class="command-result" href="#sectors" data-i18n="navSectors">القطاعات</a>
+            <a class="command-result" href="#companies" data-i18n="navCompanies">الشركات</a>
+            <a class="command-result" href="#timeline" data-i18n="navTimeline">المسيرة</a>
+            <a class="command-result" href="#founder" data-i18n="navFounder">المؤسس</a>
         </nav>
 
-        <p class="command-empty" id="commandEmpty" hidden>لا توجد أقسام مطابقة.</p>
+        <p class="command-empty" id="commandEmpty" data-i18n="searchEmpty" hidden>لا توجد أقسام مطابقة.</p>
 
     </dialog>
 
@@ -185,7 +184,7 @@
         <section class="hero" id="home">
 
             <div class="hero-grid"></div>
-            <canvas class="hero-particles" aria-hidden="true"></canvas>
+            <canvas id="hero-3d-canvas" class="hero-particles" aria-hidden="true"></canvas>
 
             <div class="container hero-content">
 
@@ -195,12 +194,12 @@
                 </div>
 
                 <h1 class="reveal">
-                    نبني البرمجيات.
+                    <span class="hero-title-main" data-i18n="heroTitleLead">نبني البرمجيات.</span>
                     <br>
-                    <span>نطوّر المستقبل.</span>
+                    <span data-i18n="heroTitleAccent">نطوّر المستقبل.</span>
                 </h1>
 
-                <p class="hero-description reveal">
+                <p class="hero-description reveal" data-i18n="heroDescription">
                     Progzt Aetheric هي مؤسسة للذكاء الاصطناعي وهندسة البرمجيات
                     (AI Enterprise)، متخصصة في الأنظمة الذكية على الويب،
                     وبُنى الوكلاء المخصصة، ومشروع Monster AI.
@@ -208,11 +207,11 @@
 
                 <div class="hero-actions reveal">
 
-                    <a href="#about" class="button button-primary">
+                    <a href="#about" class="button button-primary" data-i18n="heroPrimary">
                         اكتشف Progzt Aetheric
                     </a>
 
-                    <a href="#sectors" class="button button-secondary">
+                    <a href="#sectors" class="button button-secondary" data-i18n="heroSecondary">
                         قطاعات التطوير
                     </a>
 
@@ -220,7 +219,7 @@
 
             </div>
 
-            <div class="hero-scroll">
+            <div class="hero-scroll" aria-hidden="true">
                 <span></span>
                 <small>SCROLL</small>
             </div>
@@ -236,7 +235,7 @@
 
             <div class="container">
 
-                <div class="section-label reveal" data-i18n="ecosystemLabel">
+                <div class="section-label reveal" data-i18n="aboutLabel">
                     01 — ABOUT
                 </div>
 
@@ -245,22 +244,22 @@
                     <div class="intro-heading reveal">
 
                         <h2>
-                            شركة تطوير
-                            <span>متعددة القطاعات.</span>
+                            <span class="intro-title-primary" data-i18n="aboutTitleLead">شركة تطوير</span>
+                            <span data-i18n="aboutTitleAccent">متعددة القطاعات.</span>
                         </h2>
 
                     </div>
 
                     <div class="intro-text reveal">
 
-                        <p>
+                        <p data-i18n="aboutBodyOne">
                             Progzt Aetheric هي شركة برمجيات وتطوير ناشئة
                             متعددة القطاعات، تضم قطاعات متخصصة في تطوير
                             المواقع والألعاب، وإنشاء التطبيقات، وتطوير
                             الأنظمة، وإنشاء وتصميم واجهات المستخدم.
                         </p>
 
-                        <p>
+                        <p data-i18n="aboutBodyTwo">
                             تعمل الشركة من خلال منظومة متعددة القطاعات
                             والخدمات، مع تركيز على التطوير البرمجي
                             والتقني وبناء المنتجات الرقمية.
@@ -285,22 +284,22 @@
 
                 <div class="stat reveal">
                     <strong data-number="450">0</strong>
-                    <span>قطاعًا</span>
+                    <span data-i18n="statSectors">قطاعًا</span>
                 </div>
 
                 <div class="stat reveal">
                     <strong data-number="50">0</strong>
-                    <span>شركة تابعة</span>
+                    <span data-i18n="statCompanies">شركة تابعة</span>
                 </div>
 
                 <div class="stat reveal">
                     <strong data-number="2560">0</strong>
-                    <span>شخصًا ضمن المنظومة</span>
+                    <span data-i18n="statPeople">شخصًا ضمن المنظومة</span>
                 </div>
 
                 <div class="stat reveal">
                     <strong data-number="2017">0</strong>
-                    <span>عام التأسيس</span>
+                    <span data-i18n="statFounded">عام التأسيس</span>
                 </div>
 
             </div>
@@ -318,13 +317,13 @@
 
                 <div class="section-top">
 
-                    <div class="section-label reveal">
+                    <div class="section-label reveal" data-i18n="developmentLabel">
                         02 — DEVELOPMENT
                     </div>
 
                     <h2 class="section-title reveal">
-                        مجالات
-                        <span>التطوير</span>
+                        <span class="section-title-primary" data-i18n="developmentTitleLead">مجالات</span>
+                        <span data-i18n="developmentTitleAccent">التطوير</span>
                     </h2>
 
                 </div>
@@ -340,9 +339,9 @@
                             &lt;/&gt;
                         </div>
 
-                        <h3>تطوير المواقع</h3>
+                        <h3 data-i18n="sectorWebTitle">تطوير المواقع</h3>
 
-                        <p>
+                        <p data-i18n="sectorWebDescription">
                             تطوير وبناء المواقع والمنتجات الرقمية.
                         </p>
 
@@ -357,9 +356,9 @@
                             ◇
                         </div>
 
-                        <h3>تطوير الألعاب</h3>
+                        <h3 data-i18n="sectorGamesTitle">تطوير الألعاب</h3>
 
-                        <p>
+                        <p data-i18n="sectorGamesDescription">
                             تطوير الألعاب والمشروعات الترفيهية الرقمية.
                         </p>
 
@@ -374,9 +373,9 @@
                             ◫
                         </div>
 
-                        <h3>التطبيقات</h3>
+                        <h3 data-i18n="sectorAppsTitle">التطبيقات</h3>
 
-                        <p>
+                        <p data-i18n="sectorAppsDescription">
                             إنشاء التطبيقات والمنتجات البرمجية.
                         </p>
 
@@ -391,9 +390,9 @@
                             ◎
                         </div>
 
-                        <h3>الأنظمة</h3>
+                        <h3 data-i18n="sectorSystemsTitle">الأنظمة</h3>
 
-                        <p>
+                        <p data-i18n="sectorSystemsDescription">
                             تطوير الأنظمة والحلول البرمجية.
                         </p>
 
@@ -408,9 +407,9 @@
                             ✦
                         </div>
 
-                        <h3>UI Design</h3>
+                        <h3 data-i18n="sectorDesignTitle">UI Design</h3>
 
-                        <p>
+                        <p data-i18n="sectorDesignDescription">
                             إنشاء وتصميم واجهات المستخدم والتجارب الرقمية.
                         </p>
 
@@ -432,7 +431,7 @@
 
             <div class="container">
 
-                <div class="section-label reveal">
+                <div class="section-label reveal" data-i18n="companiesLabel">
                     03 — ECOSYSTEM
                 </div>
 
@@ -443,7 +442,7 @@
                         <span>Progzt Aetheric</span>
                     </h2>
 
-                    <p data-i18n="ecosystemDescription">
+                    <p data-i18n="companiesDescription">
                         تضم شركات وقطاعات متعددة الخدمات والإنتاجية
                         تحت مظلة Progzt Aetheric.
                     </p>
@@ -724,7 +723,7 @@
 
             <div class="container">
 
-                <div class="section-label reveal">
+                <div class="section-label reveal" data-i18n="founderLabel">
                     05 — FOUNDER
                 </div>
 
@@ -732,11 +731,11 @@
 
                     <div class="founder-title reveal">
 
-                        <span>Founder &amp; Lead Developer</span>
+                        <span data-i18n="founderRole">Founder &amp; Lead Developer</span>
 
                         <h2>
-                            محمد السيد
-                            <strong>عتمان</strong>
+                            <span data-i18n="founderFirstName">محمد السيد</span>
+                            <strong data-i18n="founderLastName">عتمان</strong>
                         </h2>
 
                     </div>
@@ -744,40 +743,40 @@
 
                     <div class="founder-story reveal">
 
-                        <p>
+                        <p data-i18n="founderBioOne">
                             محمد السيد عتمان (Mohamed Elsayed Otman) هو مؤسس
                             Progzt Aetheric والمطور الرئيسي، ورجل أعمال ومطور مصري،
                             بدأت مسيرته في مجال تصميم واجهات البرمجيات
                             على الإنترنت تحت اسم Progzt عام 2016.
                         </p>
 
-                        <p>
+                        <p data-i18n="founderBioTwo">
                             في عام 2017 أسس Progzt United، التي بدأت
                             كمطورة للألعاب الإلكترونية البسيطة،
                             ثم توسعت أعمالها لتشمل قطاعات وشركات
                             متعددة المجالات.
                         </p>
 
-                        <p>
+                        <p data-i18n="founderBioThree">
                             في عام 2020 أسس Progzt Intelligence وأطلق
                             بعدها مشروع Progzt AI، ثم أسس Progzt TSD
                             عام 2022 بعد أن كانت فريقًا داخل Progzt Intelligence.
                         </p>
 
-                        <p>
+                        <p data-i18n="founderBioFour">
                             وفي عام 2024 توسعت أعماله من خلال شراكة
                             NVB، إلى جانب تأسيس شركات وقطاعات جديدة
                             في مجالات الألعاب والتطبيقات والتصميم
                             والمشروعات الاقتصادية والخدمات التكنولوجية.
                         </p>
 
-                        <p>
+                        <p data-i18n="founderBioFive">
                             في عام 2025 تم إدراج Progzt United كشركة
                             قانونية ناشئة، ثم تغير اسم الشركة في عام
                             2026 إلى Progzt Aetheric.
                         </p>
 
-                        <blockquote>
+                        <blockquote data-i18n="founderQuote">
                             «العلم ليس بالصغر»
                         </blockquote>
 
@@ -837,10 +836,15 @@
                 <span data-i18n="footerTagline">AI • SOFTWARE • DIGITAL SYSTEMS</span>
             </div>
 
-            <nav class="footer-links" aria-label="Footer navigation">
+            <nav class="footer-links" aria-label="Footer navigation" data-i18n-aria="footerNav">
                 <a href="#about" data-i18n="navAbout">عن الشركة</a>
                 <a href="#sectors" data-i18n="navSectors">القطاعات</a>
-                <a href="https://github.com/Progzt-Aetheric" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://github.com/Progzt-Aetheric" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.75 2.21 3.34 1.57.1-.72.39-1.21.7-1.49-2.48-.28-5.08-1.24-5.08-5.51 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.28-2.61 5.23-5.1 5.5.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+                </a>
+                <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.2a18.5 18.5 0 0 0-4.6-1.4l-.6 1.2a17 17 0 0 0-5 0l-.6-1.2a18.5 18.5 0 0 0-4.6 1.4C1.4 9.5.6 13.7 1 17.8a18.7 18.7 0 0 0 5.7 2.9l1.2-2a12 12 0 0 1-1.9-.9l.5-.4a13.3 13.3 0 0 0 11 0l.5.4a12 12 0 0 1-1.9.9l1.2 2a18.7 18.7 0 0 0 5.7-2.9c.5-4.8-.8-8.9-3.3-12.6ZM8.9 14.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.2 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg>
+                </a>
             </nav>
 
             <div class="footer-copy">
@@ -850,6 +854,44 @@
         </div>
 
     </footer>
+
+    <div class="aetheric-bot" id="aethericBot" aria-hidden="true">
+        <p class="aetheric-bot__greeting" id="aethericBotGreeting" dir="auto" role="status" aria-live="polite">
+            النظام متصل. أهلًا بك، سيدي.
+        </p>
+
+        <svg class="aetheric-bot__figure" viewBox="0 0 128 144" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="bot-shell" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#f7fcff" />
+                    <stop offset="1" stop-color="#c7d7e8" />
+                </linearGradient>
+                <linearGradient id="bot-visor" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#12283a" />
+                    <stop offset="1" stop-color="#07121f" />
+                </linearGradient>
+            </defs>
+
+            <path d="M64 18V9" fill="none" stroke="#8ceaff" stroke-width="4" stroke-linecap="round" />
+            <circle cx="64" cy="7" r="5" fill="#57dcff" />
+            <path d="M29 54H20a8 8 0 0 0 0 16h9m70-16h9a8 8 0 0 1 0 16h-9" fill="none" stroke="#91a9bd" stroke-width="5" stroke-linecap="round" />
+            <rect x="29" y="24" width="70" height="66" rx="23" fill="url(#bot-shell)" stroke="#a9c0d1" stroke-width="2" />
+            <rect x="37" y="39" width="54" height="34" rx="15" fill="url(#bot-visor)" />
+            <ellipse cx="53" cy="56" rx="4" ry="6" fill="#8af0ff" />
+            <ellipse cx="75" cy="56" rx="4" ry="6" fill="#8af0ff" />
+            <path d="M57 66q7 5 14 0" fill="none" stroke="#35c9ee" stroke-width="2" stroke-linecap="round" />
+            <path d="M48 91v7m32-7v7" stroke="#91a9bd" stroke-width="5" stroke-linecap="round" />
+            <rect x="39" y="97" width="50" height="31" rx="14" fill="url(#bot-shell)" stroke="#a9c0d1" stroke-width="2" />
+            <path d="M48 108h32" stroke="#55d8f3" stroke-width="3" stroke-linecap="round" />
+            <circle cx="64" cy="119" r="3" fill="#53dfff" />
+            <path d="M40 103 31 111" stroke="#91a9bd" stroke-width="6" stroke-linecap="round" />
+            <g class="aetheric-bot__hand">
+                <path d="m88 102 13-12" fill="none" stroke="#91a9bd" stroke-width="6" stroke-linecap="round" />
+                <circle cx="105" cy="87" r="8" fill="url(#bot-shell)" stroke="#a9c0d1" stroke-width="2" />
+                <path d="M105 82v10m-5-5h10" stroke="#58dfff" stroke-width="2" stroke-linecap="round" />
+            </g>
+        </svg>
+    </div>
 
 </body>
 </html>
