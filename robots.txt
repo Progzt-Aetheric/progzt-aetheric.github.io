@@ -4,4 +4,5 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
+# The sitemap is the definitive inventory of the public HTML pages.
 Sitemap: https://progzt-aetheric.github.io/sitemap.xml

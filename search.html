@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="ابحث باستخدام DuckDuckGo Instant Answer واكتشف ملخصات وموضوعات مرتبطة ببحثك.">
+    <meta name="description" content="ابحث باستخدام DuckDuckGo Instant Answer لعرض الملخصات والإجابات والموضوعات ذات الصلة، أو افتح نتائج الويب الكاملة.">
     <meta property="og:title" content="البحث — Progzt Aetheric">
-    <meta property="og:description" content="ابحث باستخدام DuckDuckGo Instant Answer.">
+    <meta property="og:description" content="بحث ويب بسيط بخلفية بيضاء وواجهة واضحة.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://progzt-aetheric.github.io/search.html">
+    <meta property="og:image" content="https://progzt-aetheric.github.io/file_00000000d5a482469897af28c331414b.png">
     <link rel="canonical" href="https://progzt-aetheric.github.io/search.html">
     <link rel="stylesheet" href="./style.css">
     <title>البحث — Progzt Aetheric</title>
@@ -18,7 +19,7 @@
         "@type": "SearchResultsPage",
         "name": "البحث — Progzt Aetheric",
         "url": "https://progzt-aetheric.github.io/search.html",
-        "description": "ابحث باستخدام DuckDuckGo Instant Answer واكتشف ملخصات وموضوعات مرتبطة ببحثك.",
+        "description": "بحث ويب باستخدام DuckDuckGo Instant Answer.",
         "inLanguage": "ar",
         "potentialAction": {
             "@type": "SearchAction",
@@ -33,32 +34,40 @@
     <script src="./search.js" defer></script>
 </head>
 <body id="top">
-    <header class="site-header">
-        <a class="wordmark" href="./index.html" aria-label="Progzt Aetheric">PROGZT <span>AETHERIC</span></a>
+    <header class="site-header content-width">
+        <a class="brand" href="./index.html" aria-label="Progzt Aetheric — الرئيسية">
+            <img class="brand-logo" src="./file_00000000d5a482469897af28c331414b.png" alt="" width="40" height="40">
+            <span class="wordmark">PROGZT <span>AETHERIC</span></span>
+        </a>
         <nav class="site-nav" aria-label="التنقل الرئيسي">
-            <a href="./index.html">الرئيسية</a><a href="./about.html">عنّا</a>
-            <a href="./work.html">ما نبنيه</a><a href="./founder.html">المؤسس</a>
-            <a href="./search.html" aria-current="page">البحث</a><a href="./status.html">الحالة</a>
-            <a href="./links.html">روابط</a><a href="./contact.html">تواصل</a>
+            <a href="./index.html">الرئيسية</a>
+            <a href="./founder.html">المؤسس</a>
+            <a href="./search.html" aria-current="page">البحث</a>
+            <a href="./contact.html">تواصل</a>
         </nav>
     </header>
+
     <main class="page-main content-width">
-        <p class="eyebrow">05 / البحث</p>
+        <p class="eyebrow">البحث / DUCKDUCKGO</p>
         <h1 class="page-heading">ابحث في الويب.</h1>
-        <p class="page-intro">اكتب موضوعًا لعرض إجابة فورية وموضوعات ذات صلة من DuckDuckGo.</p>
+        <p class="page-intro">اكتب موضوعًا لعرض الإجابات الفورية والملخصات والموضوعات ذات الصلة.</p>
         <form class="search-form" id="searchForm" action="https://duckduckgo.com/" method="get" role="search">
             <label class="visually-hidden" for="query">عبارة البحث</label>
             <input id="query" name="q" type="search" autocomplete="off" required>
             <button type="submit">ابحث</button>
         </form>
-        <p class="search-note">تعرض واجهة Instant Answer الملخصات والموضوعات المتاحة، وليست فهرسًا كاملًا لنتائج الويب. يمكنك فتح نتائج البحث الكاملة مباشرة من DuckDuckGo.</p>
+        <p class="search-note">توفّر DuckDuckGo Instant Answer ملخصات وموضوعات مرتبطة عند توفرها، وليست فهرسًا كاملًا لنتائج الويب. استخدم الرابط أسفل النتائج لفتح البحث الكامل.</p>
         <p class="search-status" id="searchStatus" role="status" aria-live="polite"></p>
         <section class="search-results" id="searchResults" aria-live="polite" aria-label="نتائج البحث"></section>
     </main>
+
     <footer class="site-footer content-width">
-        <a class="wordmark" href="./index.html">PROGZT <span>AETHERIC</span></a>
-        <nav class="footer-nav" aria-label="روابط الصفحات"><a href="./work.html">ما نبنيه</a><a href="./links.html">روابط رسمية</a><a href="./contact.html">تواصل</a></nav>
-        <a class="back-to-top" href="#top">الأعلى ↑</a>
+        <a class="brand" href="./index.html">
+            <img class="brand-logo" src="./file_00000000d5a482469897af28c331414b.png" alt="" width="32" height="32" loading="lazy">
+            <span class="wordmark">PROGZT <span>AETHERIC</span></span>
+        </a>
+        <p>© 2026 Progzt Aetheric</p>
+        <nav class="footer-nav" aria-label="روابط الصفحات"><a href="./index.html">الرئيسية</a><a href="./founder.html">المؤسس</a><a href="./contact.html">تواصل</a></nav>
     </footer>
 </body>
 </html>

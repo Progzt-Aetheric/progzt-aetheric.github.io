@@ -4,7 +4,7 @@
 
 ## Overview
 
-Progzt Aetheric (also known as Progzt) builds intelligent web systems and software products. Its stated areas of focus include custom agent architectures and Monster AI. The organization presents itself as a multi-sector technology enterprise spanning AI, software, web development, games, applications, and digital systems.
+Progzt Aetheric (also known as Progzt) builds software and digital products. Its areas of focus include custom agent architectures, Monster AI, web development, games, applications, and digital systems. Progzt Aetheric was previously known as Progzt United.
 
 ## Mission
 
@@ -12,11 +12,12 @@ Design and develop useful digital products and intelligent software systems, com
 
 ## Founder
 
-Mohamed Elsayed Otman (محمد السيد عتمان) is the founder and lead developer of Progzt Aetheric. The website describes his work across software, AI, web interfaces, games, applications, and digital products.
+Mohamed Elsayed Otman (محمد السيد عتمان) is an Egyptian entrepreneur and software developer, and the founder of Progzt Aetheric. His documented journey starts with interface design under the Progzt name in 2016, followed by Progzt United in 2017, Progzt Intelligence and Progzt AI in 2020, Progzt TSD in 2022, an NVB partnership and expansion in 2024, Progzt Studios in 2025, and the Progzt Aetheric name in 2026.
 
 ## Technology
 
-- The public website is a lightweight multi-page HTML site with a shared monochrome stylesheet.
+- The public website has four pages: home and organization overview, founder profile and journey, DuckDuckGo search, and contact/social links.
+- The site uses a shared black-and-white stylesheet and responsive navigation.
 - The search page uses the DuckDuckGo Instant Answer API for summaries and related topics; full web results open on DuckDuckGo.
 - Product and engineering focus: AI, intelligent web systems, custom agent architectures, software engineering, and digital systems.
 - Specific AI model providers, frameworks, and infrastructure are not identified in the public project files.
@@ -28,6 +29,7 @@ Mohamed Elsayed Otman (محمد السيد عتمان) is the founder and lead d
 - **Progzt Intelligence**: An AI and technology-focused part of the wider Progzt organization.
 - **Progzt TSD**: A technology unit described on the website as having started within Progzt Intelligence.
 - **Progzt Studios**: A digital-project development unit within the organization.
+- **Progzt LEGEND** and **Zoro**: Companies described in the site's organization history as working across games, applications, and design.
 
 ## Official links
 

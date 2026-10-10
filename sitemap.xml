@@ -2,42 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://progzt-aetheric.github.io/</loc>
-    <lastmod>2026-10-10T00:34:00+00:00</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://progzt-aetheric.github.io/about.html</loc>
-    <lastmod>2026-10-10T00:34:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://progzt-aetheric.github.io/work.html</loc>
-    <lastmod>2026-10-10T00:34:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://progzt-aetheric.github.io/founder.html</loc>
-    <lastmod>2026-10-10T00:34:00+00:00</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://progzt-aetheric.github.io/search.html</loc>
-    <lastmod>2026-10-10T00:34:00+00:00</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://progzt-aetheric.github.io/status.html</loc>
-    <lastmod>2026-10-10T00:34:00+00:00</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://progzt-aetheric.github.io/links.html</loc>
-    <lastmod>2026-10-10T00:34:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://progzt-aetheric.github.io/contact.html</loc>
-    <lastmod>2026-10-10T00:34:00+00:00</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
