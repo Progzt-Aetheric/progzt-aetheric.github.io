@@ -1,0 +1,13 @@
+name = "aetheric-intelligence"
+main = "src/index.js"
+compatibility_date = "2026-10-10"
+
+[vars]
+ALLOWED_ORIGIN = "https://progzt-aetheric.github.io"
+GROQ_MODEL = "llama-3.3-70b-versatile"
+
+[[unsafe.bindings]]
+name = "RATE_LIMITER"
+type = "ratelimit"
+namespace_id = "1001"
+simple = { limit = 12, period = 60 }

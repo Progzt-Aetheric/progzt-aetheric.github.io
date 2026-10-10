@@ -16,7 +16,7 @@ Mohamed Elsayed Otman (محمد السيد عتمان) is an Egyptian entreprene
 
 ## Technology
 
-- The public website has four pages: home and organization overview, founder profile and journey, DuckDuckGo search, and contact/social links.
+- The public website has five pages: home, organization overview, founder profile and journey, DuckDuckGo search, and contact/social links.
 - The site uses a shared black-and-white stylesheet and responsive navigation.
 - The search page uses the DuckDuckGo Instant Answer API for summaries and related topics; full web results open on DuckDuckGo.
 - Product and engineering focus: AI, intelligent web systems, custom agent architectures, software engineering, and digital systems.

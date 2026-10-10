@@ -18,6 +18,7 @@
     <link rel="icon" type="image/png" href="./file_00000000d5a482469897af28c331414b.png">
     <link rel="canonical" href="https://progzt-aetheric.github.io/">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css">
     <title>Progzt Aetheric — برمجيات وذكاء اصطناعي</title>
     <script type="application/ld+json">
     {
@@ -156,16 +157,23 @@
 
     <aside class="assistant-widget" data-assistant-widget>
         <section class="assistant-panel" id="assistantPanel" aria-hidden="true" aria-labelledby="assistantTitle">
-            <h2 id="assistantTitle" data-ar="مساعد Aetheric" data-en="Aetheric assistant">مساعد Aetheric</h2>
-            <p data-ar="مساعد محلي سريع لإرشادك إلى صفحات المنصة ومعلوماتها." data-en="A lightweight on-page guide to the platform and its information.">مساعد محلي سريع لإرشادك إلى صفحات المنصة ومعلوماتها.</p>
+            <div class="assistant-panel-header">
+                <div><h2 id="assistantTitle" data-ar="مساعد Aetheric" data-en="Aetheric assistant">مساعد Aetheric</h2><p class="assistant-caption" data-ar="Aetheric Intelligence System" data-en="Aetheric Intelligence System">Aetheric Intelligence System</p></div>
+                <button class="assistant-close" type="button" data-assistant-close data-ar-label="إغلاق المساعد" data-en-label="Close assistant" aria-label="إغلاق المساعد">×</button>
+            </div>
+            <div class="assistant-messages" data-assistant-messages role="log" aria-live="polite" aria-relevant="additions"></div>
             <form class="assistant-form" data-assistant-form>
                 <label class="visually-hidden" for="assistantQuestion" data-ar="اكتب سؤالك" data-en="Ask a question">اكتب سؤالك</label>
-                <input id="assistantQuestion" name="question" required data-placeholder-ar="مثال: ما مجالات عملنا؟" data-placeholder-en="For example: What do we do?" placeholder="مثال: ما مجالات عملنا؟">
-                <button type="submit" data-ar="اسأل" data-en="Ask">اسأل</button>
+                <textarea id="assistantQuestion" name="question" rows="2" maxlength="4000" required data-placeholder-ar="اكتب سؤالك..." data-placeholder-en="Ask a question..." placeholder="اكتب سؤالك..."></textarea>
+                <button type="submit" data-ar="إرسال" data-en="Send">إرسال</button>
             </form>
-            <p class="assistant-response" data-assistant-response role="status" aria-live="polite"></p>
+            <p class="assistant-status" data-assistant-status role="status" aria-live="polite"></p>
         </section>
+        <button class="assistant-fab" type="button" data-assistant-toggle aria-expanded="false" aria-controls="assistantPanel" aria-label="فتح المساعد" data-ar-label="فتح المساعد" data-en-label="Open assistant"><span aria-hidden="true">✳</span></button>
     </aside>
     <script src="./ui.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
+    <script src="./assistant-config.js" defer></script>
+    <script src="./assistant.js" defer></script>
 </body>
 </html>

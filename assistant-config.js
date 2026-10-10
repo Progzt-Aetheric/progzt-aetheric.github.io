@@ -1,0 +1,1 @@
+window.AETHERIC_ASSISTANT_ENDPOINT = "";

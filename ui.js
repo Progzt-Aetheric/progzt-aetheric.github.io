@@ -11,6 +11,7 @@
 
         document.documentElement.lang = activeLanguage;
         document.documentElement.dir = isEnglish ? "ltr" : "rtl";
+        window.dispatchEvent(new Event("progzt-language-change"));
 
         translations.forEach(element => {
             element.textContent = element.dataset[activeLanguage];

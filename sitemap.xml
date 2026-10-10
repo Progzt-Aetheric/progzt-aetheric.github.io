@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://progzt-aetheric.github.io/about.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://progzt-aetheric.github.io/founder.html</loc>
     <lastmod>2026-10-10</lastmod>
     <priority>0.8</priority>
