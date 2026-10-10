@@ -7,9 +7,19 @@ const translations = {
     ar: {
         navHome: "الرئيسية", navAbout: "عن الشركة", navSectors: "القطاعات", navCompanies: "الشركات", navTimeline: "المسيرة", navFounder: "المؤسس",
         mainNav: "التنقل الرئيسي", footerNav: "التنقل في التذييل", socialLinks: "روابط التواصل", languageToggleAria: "التبديل إلى الإنجليزية", openSearch: "فتح البحث والأوامر", openMenu: "فتح القائمة",
+        notFoundTitle: "هذه الصفحة غير موجودة.", notFoundDescription: "ربما انتقل الرابط أو كُتب بطريقة غير صحيحة. يمكنك العودة إلى الصفحة الرئيسية ومتابعة الاستكشاف.", notFoundHome: "العودة إلى الرئيسية",
+        founderConnectLabel: "03 — تواصل", founderConnectTitle: "تواصل مع المؤسس", founderConnectDescription: "تابعنا على إنستغرام أو انضم إلى مجتمع ديسكورد للتواصل مع مجتمع Progzt Aetheric.", founderInstagramLabel: "تابع على إنستغرام", founderInstagramDescription: "تابع آخر أخبار المؤسس وأعماله.", founderDiscordLabel: "انضم إلى المجتمع", founderDiscordTitle: "Progzt Aetheric على ديسكورد", founderDiscordDescription: "انضم إلى الحوار وتعرّف على المجتمع.",
         searchTitle: "البحث في الموقع", closeSearch: "إغلاق البحث", searchLabel: "ابحث عن قسم", searchPlaceholder: "ابحث عن قسم...", sectionsLabel: "أقسام الموقع", searchEmpty: "لا توجد أقسام مطابقة.",
+        heroLogoAlt: "شعار Progzt Aetheric",
+        navSearch: "البحث", homeTitleLead: "نبني البرمجيات.", homeTitleAccent: "نطوّر المستقبل.", homeDescription: "نصنع تجارب رقمية مدروسة، ونطوّر برمجيات وأنظمة ذكية تحول الأفكار الطموحة إلى واقع.", homePrimary: "استكشف المنظومة", homeSecondary: "تعرّف على المؤسس",
+        productsLabel: "01 — المنظومة", productsTitleLead: "أفكار تتحول", productsTitleAccent: "إلى إنجاز.", productsDescription: "منظومة متصلة لاستكشاف الأفكار، وبناء المنتجات، والتعرّف على أصحاب الرؤية.", productSearchTitle: "Aetheric Search", productSearchDescription: "مساحة هادئة ومركزة للبحث والاستكشاف.", productWebTitle: "هندسة الويب", productWebDescription: "منتجات رقمية تجمع بين الوضوح وتجربة الاستخدام المتقنة.", productAiTitle: "الذكاء الاصطناعي والأنظمة", productAiDescription: "ذكاء مفيد وأنظمة مدروسة وإمكانات جديدة.", productFounderTitle: "المؤسس", productFounderDescription: "تعرّف على صاحب الرؤية وراء Progzt Aetheric.",
+        capabilitiesLabel: "02 — ما نبنيه", capabilitiesTitleLead: "تقنية", capabilitiesTitleAccent: "بهدف واضح.", capabilitiesDescription: "من البرمجيات والألعاب إلى التطبيقات والأنظمة الذكية وتصميم الواجهات، نجمع التخصصات لصناعة تجارب رقمية مفيدة.", capabilityWeb: "الويب والمنتجات الرقمية", capabilityAi: "الذكاء الاصطناعي والأنظمة", capabilityGames: "الألعاب والتطبيقات", capabilityDesign: "تصميم الواجهات",
+        featuredEyebrow: "نقدم لكم AETHERIC SEARCH", featuredTitle: "مزيد من الوضوح في عالم واسع من المعلومات.", featuredDescription: "تجربة بحث مركزة من Progzt Aetheric. ابدأ فكرتك التالية بخطوة أكثر بساطة.", featuredLink: "اكتشف Aetheric Search", featuredPlaceholder: "ما الذي تود اكتشافه؟", searchSubmitAria: "بحث",
+        aboutDescription: "تجمع Progzt Aetheric بين البرمجيات والذكاء الاصطناعي وتطوير المنتجات الرقمية في منظومة متجددة، أساسها الفضول والإتقان والإيمان بأن التقنية الجيدة تجعل الأشياء أكثر وضوحًا.", aboutLink: "اكتشف المؤسس والرؤية",
+        founderIntro: "المؤسس والمالك وراء Progzt Aetheric، يقود رؤية تقنية تجمع بين البرمجيات والذكاء الاصطناعي وصناعة المنتجات الرقمية.", founderVisionLink: "اكتشف الرؤية", visionLabel: "01 — الرؤية", visionTitleLead: "من الفضول", visionTitleAccent: "إلى واقع ملموس.", visionDescription: "تقوم الرؤية على تحويل الفضول والأفكار الطموحة إلى منتجات رقمية نافعة، وبناء منظومة تجمع فرقًا وتخصصات مختلفة تحت هدف مشترك.", visionDetail: "من تطوير البرمجيات والألعاب إلى الأنظمة الذكية وتجارب المستخدم، يظل التركيز على الحرفة، والتعلم المستمر، وصناعة تقنية تحل مشكلات حقيقية.", milestonesLabel: "02 — المسيرة", milestonesTitleLead: "رحلة من", milestonesTitleAccent: "البناء المشترك.", milestonesDescription: "حكاية متجددة من الفرق والأفكار والفصول الجديدة.", milestone2016Title: "البداية الأولى", milestone2016: "بدأت رحلة Progzt في تصميم واجهات البرمجيات على الإنترنت.", milestone2026: "تحول المنظومة إلى Progzt Aetheric، إيذانًا بفصل جديد في مسيرتها.", founderNextLabel: "تابع الاستكشاف", founderNextTitleLead: "لكل فكرة جيدة", founderNextTitleAccent: "بداية تستحقها.", founderNextLink: "جرّب Aetheric Search",
+        searchKicker: "طريقة أكثر هدوءًا للاستكشاف", searchHeroLead: "ابحث عن", searchHeroAccent: "خطوتك التالية.", searchDescription: "ابدأ بسؤال، أو فكرة، أو كلمة واحدة. طريقك إلى الويب يبدأ هنا.", searchAppPlaceholder: "ابحث في الويب أو Progzt Aetheric...", searchPowered: "تجربة بحث مركزة من", localResultsLabel: "ابحث في منظومة Progzt", resultsFor: "نتائج البحث عن", searchWebLink: "ابحث في الويب عبر Bing ↗", searchNoResults: "لا توجد صفحات مطابقة في Progzt Aetheric. جرّب بحثًا أوسع أو تابع إلى الويب.", searchSuggestionsLabel: "ابدأ من هنا", searchSuggestionsLead: "اكتشف", searchSuggestionsAccent: "Progzt Aetheric.", shortcutHomeTitle: "المنظومة", shortcutHomeDescription: "اكتشف ما نبنيه.", shortcutFounderTitle: "المؤسس", shortcutFounderDescription: "تعرّف على الرؤية والحكاية.", shortcutCapabilitiesTitle: "مجالاتنا", shortcutCapabilitiesDescription: "البرمجيات والذكاء والمنتجات الرقمية.", searchEngineNote: "يبحث Aetheric Search في صفحات منظومة Progzt Aetheric. لنتائج الويب الأوسع، تابع بحثك عبر Bing.",
         heroTitleLead: "نبني البرمجيات.", heroTitleAccent: "نطوّر المستقبل.", heroDescription: "Progzt Aetheric هي مؤسسة للذكاء الاصطناعي وهندسة البرمجيات (AI Enterprise)، متخصصة في الأنظمة الذكية على الويب، وبُنى الوكلاء المخصصة، ومشروع Monster AI.", heroPrimary: "اكتشف Progzt Aetheric", heroSecondary: "قطاعات التطوير",
-        aboutLabel: "01 — عن الشركة", aboutTitleLead: "شركة تطوير", aboutTitleAccent: "متعددة القطاعات.", aboutBodyOne: "Progzt Aetheric هي شركة برمجيات وذكاء اصطناعي متعددة القطاعات، تطور المواقع والألعاب والتطبيقات والأنظمة وتجارب المستخدم.", aboutBodyTwo: "نعمل على بناء منتجات رقمية عملية وأنظمة ذكية، من الفكرة والهندسة إلى تجربة الاستخدام.",
+        aboutLabel: "عن Progzt Aetheric", aboutTitleLead: "منظومة تنمو.", aboutTitleAccent: "ورؤية تجمعنا.", aboutBodyOne: "Progzt Aetheric هي شركة برمجيات وذكاء اصطناعي متعددة القطاعات، تطور المواقع والألعاب والتطبيقات والأنظمة وتجارب المستخدم.", aboutBodyTwo: "نعمل على بناء منتجات رقمية عملية وأنظمة ذكية، من الفكرة والهندسة إلى تجربة الاستخدام.",
         statSectors: "قطاعًا", statCompanies: "شركة تابعة", statPeople: "شخصًا ضمن المنظومة", statFounded: "عام التأسيس",
         developmentLabel: "02 — مجالات التطوير", developmentTitleLead: "مجالات", developmentTitleAccent: "التطوير", sectorWebTitle: "تطوير المواقع", sectorWebDescription: "تطوير وبناء المواقع والمنتجات الرقمية.", sectorGamesTitle: "تطوير الألعاب", sectorGamesDescription: "تطوير الألعاب والمشروعات الترفيهية الرقمية.", sectorAppsTitle: "التطبيقات", sectorAppsDescription: "إنشاء التطبيقات والمنتجات البرمجية.", sectorSystemsTitle: "الأنظمة", sectorSystemsDescription: "تطوير الأنظمة والحلول البرمجية.", sectorDesignTitle: "تصميم الواجهات", sectorDesignDescription: "إنشاء وتصميم واجهات المستخدم والتجارب الرقمية.",
         companiesLabel: "03 — المنظومة", ecosystemTitleLead: "منظومة", companiesDescription: "شركات وقطاعات متخصصة تعمل ضمن منظومة Progzt Aetheric.", unitedDescription: "الكيان الذي تطورت من خلاله منظومة الشركات والقطاعات متعددة الخدمات.", intelligenceDescription: "قطاع متخصص في الذكاء الاصطناعي والتقنيات البرمجية.", tsdDescription: "قطاع تقني بدأ كفريق داخل Progzt Intelligence.", studiosDescription: "قطاع ضمن Progzt United لتطوير المشروعات الرقمية.", legendDescription: "شركة ضمن المنظومة تعمل في الألعاب والتطبيقات والتصميم.", zoroDescription: "شركة ضمن المنظومة تعمل في الألعاب والتطبيقات والتصميم.",
@@ -21,9 +31,19 @@ const translations = {
     en: {
         navHome: "Home", navAbout: "About", navSectors: "Sectors", navCompanies: "Companies", navTimeline: "Journey", navFounder: "Founder",
         mainNav: "Main navigation", footerNav: "Footer navigation", socialLinks: "Social links", languageToggleAria: "Switch to Arabic", openSearch: "Open search and commands", openMenu: "Open menu",
+        notFoundTitle: "This page isn’t here.", notFoundDescription: "The link may have moved or been mistyped. Head back home and keep exploring.", notFoundHome: "Back to home",
+        founderConnectLabel: "03 — CONNECT", founderConnectTitle: "Connect with the Founder", founderConnectDescription: "Follow on Instagram or join the Discord community to connect with the Progzt Aetheric community.", founderInstagramLabel: "FOLLOW ON INSTAGRAM", founderInstagramDescription: "Follow the founder’s updates and work.", founderDiscordLabel: "JOIN THE COMMUNITY", founderDiscordTitle: "Progzt Aetheric on Discord", founderDiscordDescription: "Join the conversation and meet the community.",
         searchTitle: "Search the site", closeSearch: "Close search", searchLabel: "Search sections", searchPlaceholder: "Search sections...", sectionsLabel: "Site sections", searchEmpty: "No matching sections.",
+        heroLogoAlt: "Progzt Aetheric logo",
+        navSearch: "Search", homeTitleLead: "We build software.", homeTitleAccent: "We shape what’s next.", homeDescription: "We create thoughtful digital experiences and intelligent software that turn ambitious ideas into reality.", homePrimary: "Explore the ecosystem", homeSecondary: "Meet the founder",
+        productsLabel: "01 — THE ECOSYSTEM", productsTitleLead: "Ideas move", productsTitleAccent: "into the world.", productsDescription: "A connected ecosystem for exploring ideas, building products, and meeting the people behind the work.", productSearchTitle: "Aetheric Search", productSearchDescription: "A calm, focused place to search and explore.", productWebTitle: "Web engineering", productWebDescription: "Digital products that bring clarity and craft to every interaction.", productAiTitle: "AI & intelligent systems", productAiDescription: "Useful intelligence, thoughtful systems, and new possibilities.", productFounderTitle: "The founder", productFounderDescription: "Meet the person and vision behind Progzt Aetheric.",
+        capabilitiesLabel: "02 — WHAT WE DO", capabilitiesTitleLead: "Technology", capabilitiesTitleAccent: "with intention.", capabilitiesDescription: "From software and games to applications, intelligent systems, and interface design, we bring disciplines together to create useful digital experiences.", capabilityWeb: "Web & digital products", capabilityAi: "AI & software systems", capabilityGames: "Games & applications", capabilityDesign: "Interface design",
+        featuredEyebrow: "INTRODUCING AETHERIC SEARCH", featuredTitle: "A little more clarity in a very big web.", featuredDescription: "A focused search experience from Progzt Aetheric. Explore your next idea with a cleaner starting point.", featuredLink: "Explore Aetheric Search", featuredPlaceholder: "What are you curious about?", searchSubmitAria: "Search",
+        aboutDescription: "Progzt Aetheric brings software, AI, and digital product development together in one evolving ecosystem, grounded in curiosity, craft, and a belief that good technology should make things clearer.", aboutLink: "Discover the founder and vision",
+        founderIntro: "The founder and owner of Progzt Aetheric, leading a technology vision that brings software, AI, and digital products together.", founderVisionLink: "Explore the vision", visionLabel: "01 — THE VISION", visionTitleLead: "Curiosity into", visionTitleAccent: "something real.", visionDescription: "The vision is to turn curiosity and ambitious ideas into useful digital products—and to build an ecosystem where different teams and disciplines work toward a shared purpose.", visionDetail: "From software and games to intelligent systems and user experiences, the focus remains on craft, continuous learning, and technology that solves real problems.", milestonesLabel: "02 — THE JOURNEY", milestonesTitleLead: "Built over", milestonesTitleAccent: "time, together.", milestonesDescription: "A growing story of teams, ideas, and new chapters.", milestone2016Title: "The first idea", milestone2016: "Progzt’s journey began in online software interface design.", milestone2026: "The ecosystem became Progzt Aetheric, marking a new chapter in its journey.", founderNextLabel: "KEEP EXPLORING", founderNextTitleLead: "Good ideas deserve", founderNextTitleAccent: "a place to begin.", founderNextLink: "Try Aetheric Search",
+        searchKicker: "A QUIETER WAY TO EXPLORE", searchHeroLead: "Search for", searchHeroAccent: "what’s next.", searchDescription: "Start with a question, an idea, or a single word. Your way into the web starts here.", searchAppPlaceholder: "Search the web or Progzt Aetheric...", searchPowered: "A focused search experience by", localResultsLabel: "SEARCH THE ECOSYSTEM", resultsFor: "Results for", searchWebLink: "Search the web with Bing ↗", searchNoResults: "No matching Progzt Aetheric pages. Try a broader search or continue to the web.", searchSuggestionsLabel: "A PLACE TO START", searchSuggestionsLead: "Explore", searchSuggestionsAccent: "Progzt Aetheric.", shortcutHomeTitle: "The ecosystem", shortcutHomeDescription: "Explore what we build.", shortcutFounderTitle: "The founder", shortcutFounderDescription: "Discover the vision and story.", shortcutCapabilitiesTitle: "Our capabilities", shortcutCapabilitiesDescription: "Software, AI, and digital products.", searchEngineNote: "Aetheric Search indexes pages in the Progzt Aetheric ecosystem. For wider web results, continue your query on Bing.",
         heroTitleLead: "We build software.", heroTitleAccent: "We shape what’s next.", heroDescription: "Progzt Aetheric is an AI and software engineering enterprise focused on intelligent web systems, custom agent architectures, and Monster AI.", heroPrimary: "Discover Progzt Aetheric", heroSecondary: "Explore our work",
-        aboutLabel: "01 — ABOUT", aboutTitleLead: "An engineering", aboutTitleAccent: "organization across disciplines.", aboutBodyOne: "Progzt Aetheric is a software and AI organization spanning web, games, applications, systems, and digital experiences.", aboutBodyTwo: "We build useful digital products and intelligent systems, from engineering foundations to the details of the user experience.",
+        aboutLabel: "ABOUT PROGZT AETHERIC", aboutTitleLead: "A growing ecosystem.", aboutTitleAccent: "A shared point of view.", aboutBodyOne: "Progzt Aetheric is a software and AI organization spanning web, games, applications, systems, and digital experiences.", aboutBodyTwo: "We build useful digital products and intelligent systems, from engineering foundations to the details of the user experience.",
         statSectors: "sectors", statCompanies: "companies", statPeople: "people in the ecosystem", statFounded: "founded",
         developmentLabel: "02 — CAPABILITIES", developmentTitleLead: "What we", developmentTitleAccent: "build", sectorWebTitle: "Web engineering", sectorWebDescription: "Websites and digital products, built for real use.", sectorGamesTitle: "Game development", sectorGamesDescription: "Games and interactive digital experiences.", sectorAppsTitle: "Applications", sectorAppsDescription: "Applications and software products.", sectorSystemsTitle: "Systems", sectorSystemsDescription: "Software systems and purpose-built solutions.", sectorDesignTitle: "Interface design", sectorDesignDescription: "User interfaces and thoughtful digital experiences.",
         companiesLabel: "03 — ECOSYSTEM", ecosystemTitleLead: "A connected", companiesDescription: "Specialized companies and teams working across the Progzt Aetheric ecosystem.", unitedDescription: "The organization through which the multi-sector company ecosystem developed.", intelligenceDescription: "A team focused on artificial intelligence and software technology.", tsdDescription: "A technology unit that began as a team within Progzt Intelligence.", studiosDescription: "A Progzt United team developing digital projects.", legendDescription: "A company in the ecosystem working across games, apps, and design.", zoroDescription: "A company in the ecosystem working across games, apps, and design.",
@@ -59,10 +79,17 @@ function setLanguage(language) {
         if (translation !== undefined) element.setAttribute("placeholder", translation);
     });
 
+    document.querySelectorAll("[data-i18n-alt]").forEach(element => {
+        const translation = dictionary[element.dataset.i18nAlt];
+        if (translation !== undefined) element.setAttribute("alt", translation);
+    });
+
     if (translationToggle) {
         translationToggle.textContent = selectedLanguage === "ar" ? "EN" : "AR";
         translationToggle.setAttribute("aria-pressed", String(selectedLanguage === "en"));
     }
+
+    document.documentElement.dispatchEvent(new Event("languagechange"));
 
     const searchField = document.getElementById("commandSearch");
     if (searchField) searchField.value = "";
@@ -510,17 +537,17 @@ if (heroCanvas && heroSection && window.THREE) {
         const wireframe = new THREE.LineSegments(
             new THREE.EdgesGeometry(shape),
             new THREE.LineBasicMaterial({
-                color: 0x35d8ff,
+                color: 0x91b5d0,
                 transparent: true,
-                opacity: 0.78
+                opacity: 0.6
             })
         );
         const orbit = new THREE.Mesh(
             new THREE.TorusGeometry(2.15, 0.008, 4, 96),
             new THREE.MeshBasicMaterial({
-                color: 0x147eff,
+                color: 0x9aaee0,
                 transparent: true,
-                opacity: 0.48
+                opacity: 0.34
             })
         );
 
@@ -545,10 +572,10 @@ if (heroCanvas && heroSection && window.THREE) {
         const particleField = new THREE.Points(
             particleGeometry,
             new THREE.PointsMaterial({
-                color: 0x52cfff,
+                color: 0xa8cee2,
                 size: isMobileViewport.matches ? 0.035 : 0.04,
                 transparent: true,
-                opacity: 0.62,
+                opacity: 0.7,
                 sizeAttenuation: true,
                 depthWrite: false
             })
@@ -665,6 +692,202 @@ if (aethericBot && aethericBotGreeting) {
         "(prefers-reduced-motion: reduce)"
     );
     let introStarted = false;
+    let botMotionStarted = false;
+    let botPauseTimer = 0;
+    let botMotionId = 0;
+    let activeBotTransitionHandler = null;
+    let currentBotEdge = "bottom";
+    let currentBotPosition = { x: 0, y: 0 };
+
+    function setBotPosition(x, y) {
+        aethericBot.style.setProperty("--bot-x", `${x}px`);
+        aethericBot.style.setProperty("--bot-y", `${y}px`);
+    }
+
+    function getRandomEdgePosition() {
+        const width = aethericBot.offsetWidth;
+        const height = aethericBot.offsetHeight;
+        const maxX = Math.max(12, window.innerWidth - width - 12);
+        const maxY = Math.max(12, window.innerHeight - height - 12);
+        const edges = ["top", "right", "bottom", "left"].filter(
+            edge => edge !== currentBotEdge
+        );
+        const edge = edges[Math.floor(Math.random() * edges.length)];
+
+        currentBotEdge = edge;
+
+        if (edge === "top" || edge === "bottom") {
+            return {
+                edge,
+                x: 12 + Math.random() * Math.max(0, maxX - 12),
+                y: edge === "top" ? 12 : maxY
+            };
+        }
+
+        return {
+            edge,
+            x: edge === "left" ? 12 : maxX,
+            y: 12 + Math.random() * Math.max(0, maxY - 12)
+        };
+    }
+
+    function getPerimeterDistance(edge, position, maxX, maxY) {
+        const horizontal = maxX - 12;
+        const vertical = maxY - 12;
+
+        if (edge === "top") return position.x - 12;
+        if (edge === "right") return horizontal + position.y - 12;
+        if (edge === "bottom") return horizontal + vertical + maxX - position.x;
+        return 2 * horizontal + vertical + maxY - position.y;
+    }
+
+    function getPerimeterPath(destination, maxX, maxY) {
+        const horizontal = maxX - 12;
+        const vertical = maxY - 12;
+        const perimeter = 2 * (horizontal + vertical);
+
+        if (!perimeter) return [destination];
+
+        const currentDistance = getPerimeterDistance(
+            currentBotEdge,
+            currentBotPosition,
+            maxX,
+            maxY
+        );
+        const destinationDistance = getPerimeterDistance(
+            destination.edge,
+            destination,
+            maxX,
+            maxY
+        );
+        const clockwise = Math.random() < 0.5;
+        const distanceToDestination = clockwise
+            ? (destinationDistance - currentDistance + perimeter) % perimeter
+            : (currentDistance - destinationDistance + perimeter) % perimeter;
+        const corners = [
+            { distance: 0, x: 12, y: 12 },
+            { distance: horizontal, x: maxX, y: 12 },
+            { distance: horizontal + vertical, x: maxX, y: maxY },
+            { distance: 2 * horizontal + vertical, x: 12, y: maxY }
+        ];
+        const waypoints = corners
+            .map(corner => ({
+                ...corner,
+                distance: clockwise
+                    ? (corner.distance - currentDistance + perimeter) % perimeter
+                    : (currentDistance - corner.distance + perimeter) % perimeter
+            }))
+            .filter(point =>
+                point.distance > 0 &&
+                point.distance < distanceToDestination
+            )
+            .sort((first, second) => first.distance - second.distance);
+
+        return [
+            ...waypoints.map(({ x, y }) => ({ x, y })),
+            destination
+        ];
+    }
+
+    function moveBotToRandomEdge() {
+        if (!botMotionStarted || reducedMotionPreference.matches) return;
+
+        const motionId = ++botMotionId;
+        const destination = getRandomEdgePosition();
+        const duration = 6500 + Math.random() * 4500;
+        const maxX = Math.max(12, window.innerWidth - aethericBot.offsetWidth - 12);
+        const maxY = Math.max(12, window.innerHeight - aethericBot.offsetHeight - 12);
+        const path = getPerimeterPath(destination, maxX, maxY);
+        const segmentDuration = duration / path.length;
+
+        aethericBot.style.setProperty("--bot-move-duration", `${segmentDuration}ms`);
+
+        function moveToNextWaypoint(index) {
+            if (motionId !== botMotionId) return;
+
+            const waypoint = path[index];
+            const onTransitionEnd = event => {
+                if (
+                    event.target !== aethericBot ||
+                    event.propertyName !== "transform" ||
+                    !botMotionStarted ||
+                    motionId !== botMotionId
+                ) {
+                    return;
+                }
+
+                activeBotTransitionHandler = null;
+                currentBotPosition = waypoint;
+
+                if (index + 1 < path.length) {
+                    moveToNextWaypoint(index + 1);
+                    return;
+                }
+
+                currentBotEdge = destination.edge;
+                window.clearTimeout(botPauseTimer);
+                botPauseTimer = window.setTimeout(moveBotToRandomEdge, 3000);
+            };
+
+            activeBotTransitionHandler = onTransitionEnd;
+            aethericBot.addEventListener("transitionend", onTransitionEnd, { once: true });
+            aethericBot.style.transform =
+                `translate3d(${waypoint.x}px, ${waypoint.y}px, 0)`;
+        }
+
+        moveToNextWaypoint(0);
+    }
+
+    function startBotMovement() {
+        if (botMotionStarted || reducedMotionPreference.matches) return;
+
+        botMotionStarted = true;
+        moveBotToRandomEdge();
+    }
+
+    window.addEventListener("resize", () => {
+        const maxX = Math.max(12, window.innerWidth - aethericBot.offsetWidth - 12);
+        const maxY = Math.max(12, window.innerHeight - aethericBot.offsetHeight - 12);
+        const x = Math.min(maxX, Math.max(12, currentBotPosition.x));
+        const y = Math.min(maxY, Math.max(12, currentBotPosition.y));
+
+        if (botMotionStarted) {
+            botMotionId += 1;
+            if (activeBotTransitionHandler) {
+                aethericBot.removeEventListener("transitionend", activeBotTransitionHandler);
+            }
+            activeBotTransitionHandler = null;
+            window.clearTimeout(botPauseTimer);
+
+            if (currentBotEdge === "top") currentBotPosition = { x, y: 12 };
+            else if (currentBotEdge === "right") currentBotPosition = { x: maxX, y };
+            else if (currentBotEdge === "bottom") currentBotPosition = { x, y: maxY };
+            else currentBotPosition = { x: 12, y };
+
+            aethericBot.style.setProperty("--bot-move-duration", "0ms");
+            aethericBot.style.transform =
+                `translate3d(${currentBotPosition.x}px, ${currentBotPosition.y}px, 0)`;
+            aethericBot.offsetWidth;
+            aethericBot.style.removeProperty("--bot-move-duration");
+            botPauseTimer = window.setTimeout(moveBotToRandomEdge, 3000);
+            return;
+        }
+
+        currentBotPosition = { x, y };
+        setBotPosition(x, y);
+    }, { passive: true });
+
+    const initialBotX = Math.max(
+        12,
+        window.innerWidth - aethericBot.offsetWidth - 12
+    );
+    const initialBotY = Math.max(
+        12,
+        window.innerHeight - aethericBot.offsetHeight - 12
+    );
+
+    currentBotPosition = { x: initialBotX, y: initialBotY };
+    setBotPosition(initialBotX, initialBotY);
 
     function updateBotGreeting() {
 
@@ -711,6 +934,7 @@ if (aethericBot && aethericBotGreeting) {
             if (event.animationName === "aetheric-bot-settle") {
                 aethericBot.classList.remove("is-settling");
                 aethericBot.classList.add("is-idle");
+                startBotMovement();
             }
 
         });
@@ -732,4 +956,130 @@ if (aethericBot && aethericBotGreeting) {
     } else {
         window.addEventListener("load", startBotIntro, { once: true });
     }
+}
+
+
+/* =========================================================
+   AETHERIC SEARCH
+========================================================= */
+
+const siteSearchForm = document.getElementById("siteSearchForm");
+const searchResultsSection = document.getElementById("searchResults");
+const searchResultList = document.getElementById("searchResultList");
+const searchQueryLabel = document.getElementById("searchQueryLabel");
+const searchEmpty = document.getElementById("searchEmpty");
+const webSearchLink = document.getElementById("webSearchLink");
+
+if (
+    siteSearchForm &&
+    searchResultsSection &&
+    searchResultList &&
+    searchQueryLabel &&
+    searchEmpty &&
+    webSearchLink
+) {
+    const searchInput = siteSearchForm.querySelector('input[name="q"]');
+    const searchCatalog = [
+        {
+            titleKey: "homeTitleLead",
+            descriptionKey: "homeDescription",
+            url: "index.html"
+        },
+        {
+            titleKey: "capabilitiesTitleLead",
+            descriptionKey: "capabilitiesDescription",
+            url: "index.html#capabilities"
+        },
+        {
+            titleKey: "founderRole",
+            descriptionKey: "founderIntro",
+            url: "founder.html"
+        },
+        {
+            titleKey: "visionTitleLead",
+            descriptionKey: "visionDescription",
+            url: "founder.html#vision"
+        },
+        {
+            titleKey: "milestonesTitleLead",
+            descriptionKey: "milestonesDescription",
+            url: "founder.html#milestones"
+        },
+        {
+            titleKey: "productSearchTitle",
+            descriptionKey: "productSearchDescription",
+            url: "search.html"
+        }
+    ];
+
+    function renderSearchResults(query) {
+        const language = document.documentElement.lang.startsWith("ar")
+            ? "ar"
+            : "en";
+        const dictionary = translations[language];
+        const terms = query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
+        const matches = searchCatalog.filter(item => {
+            const searchableText = `${dictionary[item.titleKey]} ${dictionary[item.descriptionKey]}`
+                .toLocaleLowerCase();
+
+            return terms.every(term => searchableText.includes(term));
+        });
+
+        searchQueryLabel.textContent = query;
+        searchResultList.replaceChildren();
+        searchEmpty.hidden = matches.length > 0;
+
+        matches.forEach(item => {
+            const link = document.createElement("a");
+            const heading = document.createElement("strong");
+            const description = document.createElement("span");
+            const arrow = document.createElement("span");
+
+            link.className = "search-result-card";
+            link.href = item.url;
+            heading.textContent = dictionary[item.titleKey];
+            description.textContent = dictionary[item.descriptionKey];
+            arrow.className = "search-result-arrow";
+            arrow.setAttribute("aria-hidden", "true");
+            arrow.textContent = "↗";
+
+            link.append(heading, description, arrow);
+            searchResultList.append(link);
+        });
+
+        const webSearchUrl = new URL("https://www.bing.com/search");
+        webSearchUrl.searchParams.set("q", query);
+        webSearchLink.href = webSearchUrl.href;
+        searchResultsSection.hidden = false;
+        document.getElementById("searchSuggestions").hidden = true;
+    }
+
+    siteSearchForm.addEventListener("submit", event => {
+        event.preventDefault();
+        const query = searchInput.value.trim();
+
+        if (!query) {
+            searchInput.focus();
+            return;
+        }
+
+        const pageUrl = new URL(window.location.href);
+        pageUrl.searchParams.set("q", query);
+        window.history.replaceState({}, "", pageUrl);
+        renderSearchResults(query);
+    });
+
+    const initialQuery = new URLSearchParams(window.location.search)
+        .get("q")
+        ?.trim();
+
+    if (initialQuery) {
+        searchInput.value = initialQuery.slice(0, 256);
+        renderSearchResults(searchInput.value);
+    }
+
+    document.documentElement.addEventListener("languagechange", () => {
+        if (searchResultsSection.hidden || !searchInput.value.trim()) return;
+        renderSearchResults(searchInput.value.trim());
+    });
 }

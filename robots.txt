@@ -1,6 +1,16 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Disallow: /
+Allow: /$
+Allow: /index.html$
+Allow: /founder.html$
+Allow: /search.html$
+Allow: /style.css$
+Allow: /script.js$
+Allow: /logo.png$
+
 User-agent: Google-Extended
 Allow: /
 
