@@ -16,7 +16,8 @@ Mohamed Elsayed Otman (محمد السيد عتمان) is the founder and lead d
 
 ## Technology
 
-- The public website is built with HTML, CSS, and JavaScript.
+- The public website is a lightweight multi-page HTML site with a shared monochrome stylesheet.
+- The search page uses the DuckDuckGo Instant Answer API for summaries and related topics; full web results open on DuckDuckGo.
 - Product and engineering focus: AI, intelligent web systems, custom agent architectures, software engineering, and digital systems.
 - Specific AI model providers, frameworks, and infrastructure are not identified in the public project files.
 
