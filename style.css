@@ -351,6 +351,36 @@ p {
     line-height: 1.16;
 }
 
+.hero-status-text {
+    position: relative;
+}
+
+.hero-status-text::after {
+    position: absolute;
+    inset-inline-end: -.82em;
+    top: .2em;
+    width: .2em;
+    aspect-ratio: 1;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+    animation: status-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+    0%,
+    100% {
+        opacity: .45;
+        box-shadow: 0 0 0 0 #09090900;
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 0 .16em #09090918;
+    }
+}
+
 .hero-description,
 .page-intro {
     max-width: 660px;

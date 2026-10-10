@@ -238,7 +238,7 @@
         }
 
         if (!endpoint) {
-            status.textContent = text("المساعد غير مهيأ بعد. أضف عنوان Cloudflare Worker في إعدادات المساعد.", "The assistant is not configured yet. Add the Cloudflare Worker URL to the assistant configuration.");
+            status.textContent = text("المساعد غير متاح مؤقتًا. حاول مرة أخرى لاحقًا.", "The assistant is temporarily unavailable. Please try again later.");
             return;
         }
 
