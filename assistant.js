@@ -20,6 +20,11 @@
         home: "./index.html",
         about: "./about.html",
         founder: "./founder.html",
+        projects: "./projects.html",
+        leadership: "./leadership.html",
+        blog: "./blog.html",
+        future: "./future.html",
+        help: "./help.html",
         search: "./search.html",
         contact: "./contact.html"
     };
@@ -27,6 +32,11 @@
         home: text("الرئيسية", "home page"),
         about: text("عنّا", "about page"),
         founder: text("المؤسس", "founder page"),
+        projects: text("المشروعات", "projects page"),
+        leadership: text("القيادة", "leadership page"),
+        blog: text("المدونة", "blog page"),
+        future: text("المستقبل", "future page"),
+        help: text("المساعدة", "help page"),
         search: text("البحث", "search page"),
         contact: text("التواصل", "contact page")
     };
@@ -205,6 +215,11 @@
             ["contact", /\b(contact|contact us|contact page)\b|تواصل(?:\s+معنا)?|صفحة\s+التواصل/],
             ["founder", /\b(founder|founder page)\b|المؤسس|صفحة\s+المؤسس/],
             ["about", /\b(about|about us|about page)\b|عن(?:\s+نا)?|من\s+نحن/],
+            ["projects", /\b(projects?|project page)\b|المشروعات|مشروعات|صفحة\s+المشروعات/],
+            ["leadership", /\b(leadership|leaders|leadership page)\b|القيادة|صفحة\s+القيادة/],
+            ["blog", /\b(blog|articles|blog page)\b|المدونة|مقالات|صفحة\s+المدونة/],
+            ["future", /\b(future|roadmap|future page)\b|المستقبل|خارطة\s+الطريق|roadmap/],
+            ["help", /\b(help|support|help page|support page)\b|المساعدة|الدعم|صفحة\s+المساعدة/],
             ["search", /\b(search|search page)\b|بحث|ابحث/],
             ["home", /\b(home|home page|homepage)\b|الرئيسية|الصفحة\s+الرئيسية/]
         ];
@@ -258,8 +273,8 @@
             }
 
             const reply = String(payload.reply || "");
-            const navigation = reply.match(/\[\[navigate:(home|about|founder|search|contact)\]\]/i);
-            const cleanReply = reply.replace(/\s*\[\[navigate:(?:home|about|founder|search|contact)\]\]\s*/ig, "").trim();
+            const navigation = reply.match(/\[\[navigate:(home|about|founder|projects|leadership|blog|future|help|search|contact)\]\]/i);
+            const cleanReply = reply.replace(/\s*\[\[navigate:(?:home|about|founder|projects|leadership|blog|future|help|search|contact)\]\]\s*/ig, "").trim();
             if (cleanReply) {
                 addMessage(cleanReply, "assistant");
                 history.push({ role: "assistant", content: cleanReply });
