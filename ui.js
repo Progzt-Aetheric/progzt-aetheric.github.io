@@ -4,6 +4,15 @@
     const translations = document.querySelectorAll("[data-ar][data-en]");
     const labels = document.querySelectorAll("[data-ar-label][data-en-label]");
     const placeholders = document.querySelectorAll("[data-placeholder-ar][data-placeholder-en]");
+    const backToTop = document.createElement("button");
+
+    backToTop.className = "back-to-top";
+    backToTop.type = "button";
+    backToTop.textContent = "↑";
+    backToTop.setAttribute("aria-label", "العودة إلى الأعلى");
+    backToTop.setAttribute("aria-hidden", "true");
+    backToTop.tabIndex = -1;
+    document.body.append(backToTop);
 
     function setLanguage(language, persist = true) {
         const activeLanguage = language === "en" ? "en" : "ar";
@@ -11,6 +20,7 @@
 
         document.documentElement.lang = activeLanguage;
         document.documentElement.dir = isEnglish ? "ltr" : "rtl";
+        backToTop.setAttribute("aria-label", isEnglish ? "Back to top" : "العودة إلى الأعلى");
         window.dispatchEvent(new Event("progzt-language-change"));
 
         translations.forEach(element => {
@@ -64,4 +74,20 @@
             setLanguage(document.documentElement.lang === "ar" ? "en" : "ar");
         });
     });
+
+    function updateBackToTopVisibility() {
+        const isVisible = window.scrollY > 320;
+        backToTop.classList.toggle("is-visible", isVisible);
+        backToTop.setAttribute("aria-hidden", String(!isVisible));
+        backToTop.tabIndex = isVisible ? 0 : -1;
+    }
+
+    window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+        });
+    });
+    updateBackToTopVisibility();
 })();

@@ -1026,6 +1026,52 @@ p {
     font-size: 12px;
 }
 
+.back-to-top {
+    position: fixed;
+    z-index: 19;
+    right: max(20px, calc((100vw - var(--page-width)) / 2));
+    bottom: 20px;
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+    font: inherit;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 6px 22px #00000020;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 180ms ease, transform 180ms ease, background-color 180ms ease, color 180ms ease, visibility 180ms ease;
+    visibility: hidden;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #fff;
+    color: var(--ink);
+}
+
+.back-to-top:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+}
+
+html[dir="ltr"] .back-to-top {
+    right: auto;
+    left: max(20px, calc((100vw - var(--page-width)) / 2));
+}
+
 .footer-nav {
     display: flex;
     flex-wrap: wrap;
@@ -1122,6 +1168,16 @@ p {
         inset-inline-end: 16px;
         bottom: 16px;
         width: calc(100vw - 32px);
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    html[dir="ltr"] .back-to-top {
+        right: auto;
+        left: 16px;
     }
 
     .assistant-panel {
