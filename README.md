@@ -39,9 +39,9 @@ The assistant is intentionally inactive until its deployed Worker URL is configu
 
 The `Request Google indexing update` workflow can be run manually or is triggered
 when site files change. Add the complete service-account JSON as the repository
-Actions secret `GOOGLE_INDEXING_CREDENTIALS_JSON`; do not commit credentials.
-For local runs, place credentials in the ignored `scripts/google_credentials.json`
-file or set `GOOGLE_APPLICATION_CREDENTIALS` to a credentials file path, then run:
+Actions secret `GOOGLE_CREDENTIALS`; the workflow passes it to the script as the
+`GOOGLE_CREDENTIALS` environment variable. Do not commit credentials. For local
+runs, set `GOOGLE_CREDENTIALS` to the complete service-account JSON before running:
 
 ```sh
 python -m pip install -r scripts/requirements.txt
