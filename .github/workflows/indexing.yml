@@ -1,0 +1,38 @@
+name: Request Google indexing update
+
+on:
+  push:
+    paths:
+      - "*.html"
+      - "*.css"
+      - "*.js"
+      - "assets/**"
+      - "sitemap.xml"
+      - "robots.txt"
+      - "scripts/indexing.py"
+      - "scripts/requirements.txt"
+      - ".github/workflows/indexing.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  request-indexing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: python -m pip install -r scripts/requirements.txt
+
+      - name: Request URL update
+        env:
+          GOOGLE_INDEXING_CREDENTIALS_JSON: ${{ secrets.GOOGLE_INDEXING_CREDENTIALS_JSON }}
+        run: python scripts/indexing.py

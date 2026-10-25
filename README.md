@@ -34,3 +34,22 @@ secret. Never add the key to a website JavaScript file.
 	already in use in the Cloudflare account.
 
 The assistant is intentionally inactive until its deployed Worker URL is configured.
+
+## Google Indexing API
+
+The `Request Google indexing update` workflow can be run manually or is triggered
+when site files change. Add the complete service-account JSON as the repository
+Actions secret `GOOGLE_INDEXING_CREDENTIALS_JSON`; do not commit credentials.
+For local runs, place credentials in the ignored `scripts/google_credentials.json`
+file or set `GOOGLE_APPLICATION_CREDENTIALS` to a credentials file path, then run:
+
+```sh
+python -m pip install -r scripts/requirements.txt
+python scripts/indexing.py
+```
+
+Google's Indexing API is restricted to eligible pages such as job postings and
+livestream pages. A regular website homepage may be rejected by Google even when
+the API request and credentials are configured correctly. For general site
+discovery, submit `https://progzt-aetheric.github.io/sitemap.xml` in Google Search
+Console.
