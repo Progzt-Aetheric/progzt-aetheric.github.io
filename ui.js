@@ -82,7 +82,18 @@
         backToTop.tabIndex = isVisible ? 0 : -1;
     }
 
-    window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+    let backToTopUpdateScheduled = false;
+    window.addEventListener("scroll", () => {
+        if (backToTopUpdateScheduled) {
+            return;
+        }
+
+        backToTopUpdateScheduled = true;
+        window.requestAnimationFrame(() => {
+            backToTopUpdateScheduled = false;
+            updateBackToTopVisibility();
+        });
+    }, { passive: true });
     backToTop.addEventListener("click", () => {
         window.scrollTo({
             top: 0,
