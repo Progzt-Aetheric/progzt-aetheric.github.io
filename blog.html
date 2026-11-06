@@ -26,6 +26,7 @@
     <link rel="icon" type="image/png" href="./file_00000000d5a482469897af28c331414b.png">
     <link rel="canonical" href="https://progzt-aetheric.github.io/blog.html">
     <link rel="stylesheet" href="./style.css?v=2.0">
+    <link rel="stylesheet" href="./blog.css?v=2.0">
     <title>Progzt Aetheric — Blog</title>
     <script type="application/ld+json">
     {
@@ -103,6 +104,88 @@
             <p class="hero-description" data-ar="تتناول مقالات Progzt Aetheric تطور المؤسسة، رافعة المؤسس، والتوازن بين الهندسة والابتكار التجاري في السوق العالمي." data-en="Progzt Aetheric’s editorial content explores the company’s evolution, its founder’s journey, and the balance between engineering discipline and commercial innovation.">تتناول مقالات Progzt Aetheric تطور المؤسسة، رافعة المؤسس، والتوازن بين الهندسة والابتكار التجاري في السوق العالمي.</p>
         </section>
 
+        <section class="community-section" id="community" aria-labelledby="community-title">
+            <div class="community-shell">
+                <header class="community-heading">
+                    <p class="community-kicker" data-ar="مدونة المجتمع" data-en="COMMUNITY BLOG">مدونة المجتمع</p>
+                    <h2 id="community-title" data-ar="أفكار تستحق أن تُقرأ." data-en="Ideas worth reading.">أفكار تستحق أن تُقرأ.</h2>
+                    <p data-ar="مقالات جديدة من Progzt Aetheric، مرتبة من الأحدث." data-en="New stories from Progzt Aetheric, sorted by latest.">مقالات جديدة من Progzt Aetheric، مرتبة من الأحدث.</p>
+                </header>
+
+                <div class="community-auth glass-panel">
+                    <div class="community-user" id="communityUser" hidden>
+                        <img id="communityAvatar" alt="" width="42" height="42">
+                        <div class="community-user-details">
+                            <strong><span id="communityUserName"></span><span id="communityUserBadge"></span></strong>
+                            <span id="communityUserRole"></span>
+                        </div>
+                        <div class="community-user-actions">
+                            <button class="community-button community-button-quiet" id="editProfileButton" type="button" data-ar="تعديل الملف" data-en="Edit profile">تعديل الملف</button>
+                            <button class="community-button community-button-quiet" id="signOutButton" type="button" data-ar="تسجيل الخروج" data-en="Sign out">تسجيل الخروج</button>
+                        </div>
+                    </div>
+                    <div class="community-signin" id="communitySignin">
+                        <p data-ar="سجّل الدخول بحساب Google." data-en="Sign in with Google to continue.">سجّل الدخول بحساب Google.</p>
+                        <button class="community-button community-button-primary" id="signInButton" type="button">
+                            <svg class="google-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.75 7.18l7.73 6C44.43 37.93 46.98 31.7 46.98 24.55Z"/><path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.2A23.9 23.9 0 0 0 0 24c0 3.87.93 7.52 2.56 10.78l7.97-6.19Z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.91-5.8l-7.73-6c-2.14 1.44-4.89 2.3-8.18 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z"/></svg>
+                            <span data-ar="المتابعة باستخدام Google" data-en="Continue with Google">المتابعة باستخدام Google</span>
+                        </button>
+                    </div>
+                </div>
+
+                <form class="community-composer glass-panel" id="postForm" hidden>
+                    <div class="community-form-heading">
+                        <p class="community-kicker" data-ar="مساحة المحرر" data-en="EDITOR DESK">مساحة المحرر</p>
+                        <h3 data-ar="انشر مقالاً جديداً" data-en="Publish a new article">انشر مقالاً جديداً</h3>
+                    </div>
+                    <label for="postTitle" data-ar="العنوان" data-en="Title">العنوان</label>
+                    <input id="postTitle" name="title" type="text" maxlength="140" required>
+                    <label for="postExcerpt" data-ar="مقدمة قصيرة" data-en="Short excerpt">مقدمة قصيرة</label>
+                    <textarea id="postExcerpt" name="excerpt" rows="2" maxlength="320" required></textarea>
+                    <label for="postContent" data-ar="المحتوى" data-en="Content">المحتوى</label>
+                    <textarea id="postContent" name="content" rows="8" maxlength="15000" required></textarea>
+                    <label for="postCoverImage" data-ar="رابط صورة الغلاف" data-en="Cover image URL">رابط صورة الغلاف</label>
+                    <input id="postCoverImage" name="coverImageUrl" type="url" inputmode="url" placeholder="https://example.com/image.jpg" required>
+                    <button class="community-button community-button-primary" id="publishButton" type="submit" data-ar="نشر المقال" data-en="Publish article">نشر المقال</button>
+                </form>
+
+                <p class="community-status" id="communityStatus" role="status" aria-live="polite"></p>
+                <div class="community-feed-heading">
+                    <h3 data-ar="أحدث المقالات" data-en="Latest articles">أحدث المقالات</h3>
+                    <span class="community-live"><i aria-hidden="true"></i><span data-ar="مباشر" data-en="LIVE">مباشر</span></span>
+                </div>
+                <div class="community-feed" id="communityPosts" aria-live="polite" aria-busy="true"></div>
+            </div>
+        </section>
+
+        <dialog class="profile-dialog" id="onboardingDialog" aria-labelledby="onboardingTitle">
+            <form class="profile-dialog-card" id="onboardingForm">
+                <p class="community-kicker" data-ar="مرحباً بك" data-en="WELCOME">مرحباً بك</p>
+                <h2 id="onboardingTitle" data-ar="أنشئ ملفك الشخصي" data-en="Set up your profile">أنشئ ملفك الشخصي</h2>
+                <p data-ar="اختر اسماً عاماً ورابط صورة شخصية للمتابعة." data-en="Choose a public username and avatar URL to continue.">اختر اسماً عاماً ورابط صورة شخصية للمتابعة.</p>
+                <label for="onboardingUsername" data-ar="اسم المستخدم" data-en="Username">اسم المستخدم</label>
+                <input id="onboardingUsername" name="username" type="text" minlength="2" maxlength="40" autocomplete="nickname" required>
+                <label for="onboardingAvatarUrl" data-ar="رابط الصورة الشخصية" data-en="Avatar image URL">رابط الصورة الشخصية</label>
+                <input id="onboardingAvatarUrl" name="avatarUrl" type="url" inputmode="url" placeholder="https://example.com/avatar.jpg" required>
+                <p class="profile-dialog-error" id="onboardingError" role="status" aria-live="polite"></p>
+                <button class="community-button community-button-primary" id="onboardingSubmit" type="submit" data-ar="حفظ ومتابعة" data-en="Save and continue">حفظ ومتابعة</button>
+            </form>
+        </dialog>
+
+        <dialog class="profile-dialog" id="profileDialog" aria-labelledby="profileTitle">
+            <form class="profile-dialog-card" id="profileForm">
+                <button class="profile-dialog-close" id="closeProfileButton" type="button" aria-label="إغلاق" data-ar-label="إغلاق" data-en-label="Close">×</button>
+                <p class="community-kicker" data-ar="إعدادات الحساب" data-en="ACCOUNT SETTINGS">إعدادات الحساب</p>
+                <h2 id="profileTitle" data-ar="تعديل الملف الشخصي" data-en="Edit your profile">تعديل الملف الشخصي</h2>
+                <label for="profileUsername" data-ar="اسم المستخدم" data-en="Username">اسم المستخدم</label>
+                <input id="profileUsername" name="username" type="text" minlength="2" maxlength="40" autocomplete="nickname" required>
+                <label for="profileAvatarUrl" data-ar="رابط الصورة الشخصية" data-en="Avatar image URL">رابط الصورة الشخصية</label>
+                <input id="profileAvatarUrl" name="avatarUrl" type="url" inputmode="url" required>
+                <p class="profile-dialog-error" id="profileError" role="status" aria-live="polite"></p>
+                <button class="community-button community-button-primary" id="profileSubmit" type="submit" data-ar="حفظ التغييرات" data-en="Save changes">حفظ التغييرات</button>
+            </form>
+        </dialog>
+
         <section class="text-section content-width" aria-labelledby="blog-articles-title">
             <p class="section-label" data-ar="المقالات" data-en="ARTICLES">المقالات</p>
             <div class="section-content">
@@ -165,5 +248,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
     <script src="./assistant-config.js?v=2.0" defer></script>
     <script src="./assistant.js?v=2.0" defer></script>
+    <script src="./firebase-config.js?v=2.0"></script>
+    <script type="module" src="./blog.js?v=2.0"></script>
 </body>
 </html>

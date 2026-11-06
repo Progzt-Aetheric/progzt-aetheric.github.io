@@ -1,0 +1,82 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function owner() {
+      return signedIn()
+        && request.auth.token.email == 'progzt9@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+
+    function validImageUrl(value) {
+      return value is string
+        && value.matches('https?://.+');
+    }
+
+    match /users/{userId} {
+      allow read: if signedIn() && request.auth.uid == userId;
+      allow create: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.keys().hasAll([
+          'uid', 'email', 'username', 'avatarUrl', 'isVerified', 'createdAt', 'updatedAt'
+        ])
+        && request.resource.data.keys().hasOnly([
+          'uid', 'email', 'username', 'avatarUrl', 'isVerified', 'createdAt', 'updatedAt'
+        ])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.username is string
+        && request.resource.data.username.size() >= 2
+        && request.resource.data.username.size() <= 40
+        && validImageUrl(request.resource.data.avatarUrl)
+        && request.resource.data.isVerified == false
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.updatedAt == request.time;
+      allow update: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'username', 'avatarUrl', 'updatedAt'
+        ])
+        && request.resource.data.username is string
+        && request.resource.data.username.size() >= 2
+        && request.resource.data.username.size() <= 40
+        && validImageUrl(request.resource.data.avatarUrl)
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if false;
+    }
+
+    match /posts/{postId} {
+      allow read: if true;
+      allow create: if owner()
+        && request.resource.data.keys().hasAll([
+          'title', 'excerpt', 'content', 'coverImageUrl',
+          'authorId', 'authorName', 'authorAvatarUrl', 'authorVerified', 'createdAt'
+        ])
+        && request.resource.data.keys().hasOnly([
+          'title', 'excerpt', 'content', 'coverImageUrl',
+          'authorId', 'authorName', 'authorAvatarUrl', 'authorVerified', 'createdAt'
+        ])
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 140
+        && request.resource.data.excerpt is string
+        && request.resource.data.excerpt.size() > 0
+        && request.resource.data.excerpt.size() <= 320
+        && request.resource.data.content is string
+        && request.resource.data.content.size() > 0
+        && request.resource.data.content.size() <= 15000
+        && validImageUrl(request.resource.data.coverImageUrl)
+        && request.resource.data.authorId == request.auth.uid
+        && request.resource.data.authorName is string
+        && request.resource.data.authorName.size() >= 2
+        && validImageUrl(request.resource.data.authorAvatarUrl)
+        && request.resource.data.authorVerified == true
+        && request.resource.data.createdAt == request.time;
+      allow update: if false;
+      allow delete: if owner();
+    }
+  }
+}

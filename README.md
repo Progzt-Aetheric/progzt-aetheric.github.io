@@ -13,6 +13,31 @@ proxy so the Groq API key is never sent to the browser.
 - `search.html` — DuckDuckGo Instant Answer search
 - `contact.html` — Contact channels
 
+## Community blog setup
+
+The community section on `blog.html` uses Firebase Authentication (Google) and Cloud
+Firestore. It reads published articles for everyone; only the verified owner account
+`progzt9@gmail.com` can publish or delete them. Google sign-in requires users to complete
+a public username and avatar URL before continuing.
+
+1. The Firebase web app configuration for `progzt-39599` is in `firebase-config.js`.
+   Firebase web API keys identify a project; never put service-account credentials or
+   other server secrets in the site.
+2. In Firebase Authentication, enable the Google provider and add
+   `progzt-aetheric.github.io` to the authorized domains. For local testing, add
+   `localhost` as well.
+3. Create a Cloud Firestore database and publish `firestore.rules` in the Firebase
+   console. The rules allow public article reads, owner-only article publishing/deletion,
+   and user-managed profile fields while preventing users from granting themselves the
+   verified badge. Owner access is enforced against the verified Firebase token.
+4. Deploy the site over HTTPS and test Google sign-in, required profile onboarding,
+   profile editing, and owner publishing/deletion.
+
+Article documents are stored in Firestore's `posts` collection. User profile documents are
+stored in `users` and are readable only by the signed-in user. Setting a user's
+`isVerified` field to `true` must be done through a trusted Firebase console/admin process;
+users cannot change that field themselves.
+
 ## Assistant setup
 
 The public site cannot safely store a Groq API key. Revoke any key shared in chat or
