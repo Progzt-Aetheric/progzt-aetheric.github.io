@@ -6,3 +6,4 @@ Allow: /
 
 # The sitemap is the definitive inventory of the public HTML pages.
 Sitemap: https://progzt-aetheric.github.io/sitemap.xml
+Sitemap: https://progzt-aetheric.github.io/mohamed-elsayed-etman/sitemap.xml
